@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "news": "Actualités",
+    "contact": "Contact"
+  },
+  "home": {
+    "headline": "Design et rénovation sur la Côte d'Azur",
+    "desc": "Design et rénovation experts sur la Côte d'Azur",
+    "fullDesc1": "Nous sommes spécialisés dans la création d'intérieurs uniques et élégants pour des maisons, des appartements et des espaces commerciaux à Nice, Cannes et Antibes. Notre équipe d'experts conçoit des projets qui allient sophistication esthétique et fonctionnalité, reflétant l'atmosphère de la Côte d'Azur et l'individualité de nos clients.",
+    "fullDesc2": "Nous proposons des services clés en main — de la conception du design à l'achèvement des travaux, en garantissant confort et attention à chaque détail. Nous prenons en compte tous les aspects, y compris les caractéristiques architecturales de la propriété, les souhaits des clients et les tendances modernes en matière de design.",
+    "readMore": "Notre approche inclut l'utilisation de technologies innovantes et une planification minutieuse de chaque étape. Nous collaborons avec des entrepreneurs et des fournisseurs de confiance pour garantir une exécution de haute qualité et une fiabilité optimale. Que ce soit pour un appartement cosy, une maison spacieuse ou un espace commercial, nous nous efforçons de créer un environnement qui reflète votre style, met en valeur votre individualité et vous apporte satisfaction pendant de nombreuses années. Contactez-nous pour lancer votre projet et transformer votre espace."
+  }
+}

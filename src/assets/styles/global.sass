@@ -16,3 +16,82 @@ body
 
 *, *::before, *::after
   box-sizing: inherit
+
+.container
+  width: 100%
+  padding: 0 100px
+  display: flex
+
+.center-x-y
+  display: flex
+  justify-content: center
+  align-items: center
+
+.center-x
+  display: flex
+  justify-content: center
+
+p
+  font-family: 'Inter', sans-serif
+  font-size: 20px
+  font-weight: 400
+  line-height: 1.5
+  text-align: left
+
+
+h1
+  font-family: 'Inter', sans-serif
+  font-size: 7.5rem
+  font-weight: 500
+  line-height: 1.2
+  text-align: left
+  color: #fff
+  margin: 0
+
+h2
+  font-family: 'Inter', sans-serif
+  font-size: 6.8rem
+  font-weight: 500
+  line-height: 1.1
+  text-align-last: left
+  color: #202020
+  margin: 0
+
+
+h3
+  font-family: 'Inter', sans-serif
+  font-size: 4rem
+  font-weight: 500
+  line-height: 1.2
+  text-align: left
+  margin: 0
+  color: #636363
+
+@media (max-width: 1400px)
+  p
+    font-size: 17px
+  h1
+  h3
+    font-size: 3rem
+
+@media (max-width: 1200px)
+  h1
+    font-size: 5.5rem
+  h2
+    font-size: 5rem
+  h3
+    font-size: 2rem
+
+@media (max-width: 992px)
+  h1
+    font-size: 4rem
+  h2
+    font-size: 3.5rem
+
+@media (max-width: 768px)
+  h1
+    font-size: 3rem
+
+@media (max-width: 576px)
+  h1
+    font-size: 3rem

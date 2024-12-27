@@ -1,0 +1,17 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "news": "News",
+    "contact": "Contact Us"
+  },
+  "home": {
+    "headline": "Design and Renovation on the French Riviera",
+    "desc": "Expert Design and Renovation on the French Riviera",
+    "fullDesc1": "We specialize in creating unique and stylish interiors for homes, apartments, and commercial spaces in Nice, Cannes, and Antibes. Our team of experts develops projects that combine aesthetic sophistication with functionality, reflecting the atmosphere of the French Riviera and the individuality of our clients.",
+    "fullDesc2": "We offer turnkey services — from design concepts to renovation completion, ensuring comfort and attention to every detail. We take into account all aspects, including the architectural features of the property, client preferences, and modern design trends.",
+    "readMore": "Our approach includes the use of innovative technologies and careful planning of every stage. We work with trusted contractors and suppliers to ensure high-quality execution and reliability. Whether it&rsquo;s a cozy apartment, a spacious house, or a commercial space, we strive to create an environment that reflects your style, emphasizes individuality, and brings you joy for many years. Contact us to start your project and transform your space."
+  }
+}
