@@ -88,8 +88,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRoute } from "vue-router";
-import LangSwitchComponent from "../LangSwitchComponent.vue";
-import SocialMedias from "../SocialMedias.vue";
+import LangSwitchComponent from "@/components/Tools/LangSwitchComponent.vue";
+import SocialMedias from "@/components/Tools/SocialMedias.vue";
 
 // Определение активного маршрута
 const route = useRoute();

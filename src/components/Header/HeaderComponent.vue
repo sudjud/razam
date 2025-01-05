@@ -62,7 +62,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useRoute } from "vue-router";
-import LangSwitchComponent from "../LangSwitchComponent.vue";
+import LangSwitchComponent from "@/components/Tools/LangSwitchComponent.vue";
 
 export default defineComponent({
   name: "HeaderComponent",

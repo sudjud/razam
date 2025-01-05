@@ -1,0 +1,19 @@
+=center-x-y
+  display: flex
+  justify-content: center
+  align-items: center
+
+=center-x
+  display: flex
+  justify-content: center
+
+=responsive($property, $xxl, $xl, $lg, $md, $sm)
+  #{$property}: $xxl
+  @media (max-width: 1200px)
+    #{$property}: $xl
+  @media (max-width: 992px)
+    #{$property}: $lg
+  @media (max-width: 768px)
+    #{$property}: $md
+  @media (max-width: 576px)
+    #{$property}: $sm

@@ -94,7 +94,9 @@
 
 @media (max-width: 768px)
   .values-list
-    padding-right: 0
+    padding-right: 20px
+    .value-item
+      min-width: 113px
     &-top
       margin-right: 10%
     &-bottom
