@@ -117,17 +117,17 @@ export default defineComponent({
         a
           text-decoration: none
           font-size: 16px
-          color: #636363
+          color: $font-grey
           transition: color 0.3s ease
 
           &:hover
-            color: #202020
+            color: $font-black
 
           &.active
-            color: #202020
+            color: $font-black
       .divider
         font-size: 16px
-        color: #636363
+        color: $font-grey
         margin: 0 12px
 
 @media (max-width: 1200px)

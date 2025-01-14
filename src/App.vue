@@ -2,6 +2,7 @@
   <div id="app">
     <component :is="currentHeaderComponent" />
     <HomeView />
+    <FooterComponent />
     <router-view />
   </div>
 </template>
@@ -11,6 +12,7 @@ import { ref, onMounted, onUnmounted } from "vue";
 import HeaderComponent from "@/components/Header/HeaderComponent.vue";
 import HeaderSmComponent from "@/components/Header/HeaderSmComponent.vue";
 import HomeView from "./views/HomeView.vue";
+import FooterComponent from "./components/Footer/FooterComponent.vue";
 
 const getInitialHeaderComponent = () => {
   return window.innerWidth < 768 ? HeaderSmComponent : HeaderComponent;

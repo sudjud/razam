@@ -68,15 +68,15 @@
       align-items: center
       width: 60px
       height: 60px
-      border: 1px solid #636363
+      border: 1px solid $font-grey
       border-radius: 50%
       font-size: 38px
       font-weight: 100
-      color: #636363
+      color: $font-grey
       p
         font-size: 32px
         font-weight: 400
-        color: #202020
+        color: $font-black
 
 @media (max-width: 1400px)
   .values-list

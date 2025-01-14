@@ -96,9 +96,6 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
 </script>
 
 <style lang="sass" scoped>
-$primary-color: #202020
-$secondary-color: #636363
-$divider-color: #ccc
 
 .gallery-sm
   display: none
@@ -119,13 +116,13 @@ $divider-color: #ccc
       max-width: 800px
       height: auto
       .swiper-button-next, .swiper-button-prev
-        color: #E8E3DF !important
+        color: $bgc-second !important
         &:hover
-          color: #636363
+          color: $font-grey
       .swiper-pagination-bullet
         background-color: #ccc
         &.swiper-pagination-bullet-active
-          background-color: #202020
+          background-color: $font-black
     .slide-content
       display: flex
       flex-direction: column
@@ -138,7 +135,7 @@ $divider-color: #ccc
     .description
       font-size: 2rem
       font-weight: 500
-      color: #202020
+      color: $font-black
       text-align: center
 
 .gallery
@@ -153,7 +150,7 @@ $divider-color: #ccc
     align-items: center
     justify-content: space-between
     h2
-      color: $primary-color
+      color: $font-black
       padding-right: 3rem
       padding-bottom: 3.9rem
       font-size: 5rem
@@ -167,10 +164,10 @@ $divider-color: #ccc
       margin: 0 13px
     &-first-minus
       font-size: 0.7rem
-      color: $secondary-color
+      color: $font-grey
     &-last-minus
       font-size: 0.7rem
-      color: $divider-color
+      color: #ccc
 
   .display
     display: flex
@@ -192,7 +189,7 @@ $divider-color: #ccc
         font-size: 2rem
         cursor: pointer
         transition: color 0.3s ease
-        color: $secondary-color
+        color: $font-grey
         .button-wrapper
           display: flex
           flex-direction: row
@@ -208,7 +205,7 @@ $divider-color: #ccc
           color: black
 
         &.active
-          color: $primary-color
+          color: $font-black
 
       .arrow-wrapper
         margin-left: auto
@@ -220,7 +217,7 @@ $divider-color: #ccc
         width: 3rem
         height: 3rem
         border-radius: 50%
-        border: 1px solid $primary-color
+        border: 1px solid $font-black
 
         img
           width: 0.7rem

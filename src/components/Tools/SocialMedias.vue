@@ -33,8 +33,8 @@
     align-items: center
     width: 30px
     height: 30px
-    background-color: #fff
-    border: 2px solid #fff
+    background-color: $font-white
+    border: 2px solid $font-white
     border-radius: 50%
     color: transparent
     text-decoration: none

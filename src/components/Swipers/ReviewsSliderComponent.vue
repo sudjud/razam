@@ -13,9 +13,9 @@
         </div>
         <!-- Отзыв -->
         <div class="testimonials-content">
-          <div>{{ testimonial.title }}</div>
+          <h5>{{ testimonial.title }}</h5>
           <p>{{ testimonial.text }}</p>
-          <span class="testimonial-author">{{ testimonial.name }}</span>
+          <div class="testimonial-author">{{ testimonial.name }}</div>
         </div>
       </swiper-slide>
     </swiper>
@@ -86,46 +86,50 @@ export default defineComponent({
 .testimonials
   width: 100%
   display: flex
-  padding: 0 100px
+  padding: 0 6.25rem
   justify-content: center
   align-items: center
-  background-color: #f8f8f8
-  @media (max-width: 768px)
-    padding: 0 20px
   &-slider
     width: 100%
     .swiper-slide
       display: grid
-      grid-template-columns: 1fr 2fr 1fr
+      grid-template-columns: 0.25fr 1.5fr 1fr
       grid-gap: 2rem
       align-items: center
-      padding: 2rem
       border-radius: 10px
+      @media (max-width: 992px)
+        grid-template-columns: 0.25fr 2fr 0.2fr
   &-photo
     display: flex
     justify-content: center
     align-items: flex-start
+    justify-content: flex-start
     margin-bottom: auto
-    padding-left: 10px
     img
-      width: 100px
-      height: 100px
+      width: 6.25rem
+      height: 6.25rem
       border-radius: 12px
       object-fit: cover
       @media (max-width: 768px)
         width: 70px
         height: 70px
   &-content
-.testimonial-author
-  font-size: 1rem
-  font-weight: 600
-  margin-top: 1rem
+    h5
+      color: $font-black
+    p
+      color: $font-grey
+      font-size: 1.25rem
+    .testimonial-author
+      font-size: 1.25rem
+      color: $font-black
+      font-weight: 500
+      margin-top: 3.625rem
 
 .slider-buttons
   display: flex
   flex-direction: row
   align-self: flex-end
-  padding-bottom: 100px
+  padding-bottom: 20px
   @media (max-width: 768px)
     display: none
 

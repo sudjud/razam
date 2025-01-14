@@ -183,16 +183,15 @@ export default defineComponent({
     border-radius: 8px
 
   h3
-    font-size: 18px
+    font-size: 2rem
     margin: 12px 0 8px
 
   p
-    font-size: 14px
-    color: #666
+    color: $font-grey
 
 /* Пагинация */
 .pagination
   margin-top: 20px
   font-size: 14px
-  color: #333
+  color: $font-black
 </style>

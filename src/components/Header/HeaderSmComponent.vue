@@ -139,7 +139,7 @@ const closeMenu = (): void => {
   span
     width: 25px
     height: 3px
-    background-color: #333
+    background-color: $font-black
     transition: transform 0.3s ease
 
   &.open span:nth-child(1)
@@ -181,12 +181,12 @@ const closeMenu = (): void => {
 
       a
         text-decoration: none
-        color: #333
+        color: $font-grey
         font-weight: 500
         transition: color 0.3s ease
 
         &.active
-          color: #007bff
+          color: $font-black
 
 .social-links
   position: absolute
