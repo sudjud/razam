@@ -107,8 +107,12 @@
         <h4>305 Av. Georges Pompidou, 06220<br />Vallauris, Франция</h4>
       </div>
     </div>
-    <div class="add">© 2023 Razam. Made with ♥ NOVOWEB.</div>
   </footer>
+  <div class="add">
+    © 2025 Razam. Made with ♥<a target="_blank" href="https://novoweb.eu/"
+      >NOVOWEB.</a
+    >
+  </div>
 </template>
 
 <script setup>
@@ -183,6 +187,17 @@ footer
       h4
         color: $font-grey
         font-size: 2rem
+.add
+  background-color: $bgc-second
+  color: $font-black
+  width: 100%
+  height: 80px
+  display: flex
+  align-items: center
+  justify-content: center
+  a
+    color: $font-black
+    margin-left: 4px
 
 // ----------------------  links  ----------------------
 .fa-youtube

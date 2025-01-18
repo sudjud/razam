@@ -1,7 +1,7 @@
 <template>
   <swiper
-    :slides-per-view="3.3"
     :space-between="50"
+    :breakpoints="breakpoints"
     loop
     @swiper="bindSwiperInstance"
   >
@@ -89,6 +89,41 @@ const news = [
     date: "2 Ноября 2024",
   },
 ];
+
+const breakpoints = ref({
+  300: {
+    slidesPerView: 1.1,
+    spaceBetween: 0,
+  },
+  576: {
+    slidesPerView: 1.1,
+    spaceBetween: 0,
+  },
+  768: {
+    slidesPerView: 1.4,
+    spaceBetween: 0,
+  },
+  992: {
+    slidesPerView: 1.7,
+    spaceBetween: 0,
+  },
+  1200: {
+    slidesPerView: 2.1,
+    spaceBetween: 0,
+  },
+  1400: {
+    slidesPerView: 2.5,
+    spaceBetween: 0,
+  },
+  1700: {
+    slidesPerView: 2.9,
+    spaceBetween: 0,
+  },
+  1920: {
+    slidesPerView: 3.3,
+    spaceBetween: 20,
+  },
+});
 
 const swipe = ref(null);
 
