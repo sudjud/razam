@@ -1,3 +1,5 @@
+@import './variables'
+  
 =center-x-y
   display: flex
   justify-content: center
@@ -6,6 +8,15 @@
 =center-x
   display: flex
   justify-content: center
+
+=regpad
+  padding: 0 100px
+  @media (max-width: 1200px)
+    padding: 0 70px
+  @media (max-width: 992px)
+    padding: 0 30px
+  @media (max-width: 768px)
+    padding: 0 20px
 
 =responsive($property, $xxl, $xl, $lg, $md, $sm)
   #{$property}: $xxl
