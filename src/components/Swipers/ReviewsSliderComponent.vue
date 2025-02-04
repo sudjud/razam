@@ -3,6 +3,7 @@
     <swiper
       ref="swiper"
       :loop="true"
+      :autoplay="{ delay: 3000, disableOnInteraction: true }"
       class="testimonials-slider"
       @swiper="bindSwiperInstance"
     >
@@ -36,11 +37,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Swiper as SwiperInstance } from "swiper/types";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay, EffectCube } from "swiper/modules";
 import user1 from "@/assets/images/home/Julien.jpg";
 import user2 from "@/assets/images/home/Julien.jpg";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Autoplay, EffectCube]);
 
 export default defineComponent({
   name: "ReviewsSlider",
@@ -143,7 +144,7 @@ export default defineComponent({
   display: inline-block
   font-size: 1rem
 
-  &:hover
+  &:active
     background: rgba(0, 0, 0, 0.8)
     color: white
     transition: 0.3s

@@ -5,6 +5,10 @@ import router from "./router";
 import store from "./store";
 import { createI18n } from "vue-i18n";
 import "@fortawesome/fontawesome-free/css/all.css";
+import "animate.css";
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import WOW from "wow.js";
 
 import en from "@/locales/en.json";
 import ru from "@/locales/ru.json";
@@ -20,3 +24,5 @@ const i18n = createI18n({
 
 // Создание Vue-приложения
 createApp(App).use(store).use(router).use(i18n).mount("#app");
+
+new WOW().init();

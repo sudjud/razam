@@ -17,7 +17,7 @@
         >
         <span class="top-last">{{ padNumber(items.length) }}</span>
       </span>
-      <h2>Наши услуги</h2>
+      <h2 class="wow animate__animated animate__fadeInLeft">Наши услуги</h2>
     </div>
     <div class="display">
       <div class="buttons">

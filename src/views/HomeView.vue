@@ -5,19 +5,31 @@
         <SocialMedias />
       </div>
       <div class="content">
-        <h1>Дизайн и&nbsp;ремонт на&nbsp;Лазурном Берегу</h1>
+        <h1 class="wow animate__animated animate__fadeInLeft">
+          Дизайн и&nbsp;ремонт на&nbsp;Лазурном Берегу
+        </h1>
       </div>
     </div>
   </section>
   <section class="expert-design">
     <div class="container">
       <div class="image-wrapper">
-        <img src="@/assets/images/home/2.jpg" alt="Interior" />
+        <img
+          class="wow animate__animated animate__fadeInLeft"
+          src="@/assets/images/home/2.jpg"
+          alt="Interior"
+        />
       </div>
-      <div class="text-content">
-        <h3>{{ $t("home.desc") }}</h3>
-        <p>{{ $t("home.fullDesc1") }}</p>
-        <p>{{ $t("home.fullDesc2") }}</p>
+      <div class="text-content wow animate__animated animate__fadeInRight">
+        <h3>
+          {{ $t("home.desc") }}
+        </h3>
+        <p>
+          {{ $t("home.fullDesc1") }}
+        </p>
+        <p>
+          {{ $t("home.fullDesc2") }}
+        </p>
         <span class="read-more">Читать больше</span>
       </div>
     </div>
@@ -26,8 +38,10 @@
     <div class="container">
       <div class="main">
         <div class="title-block">
-          <h2>Наши<br />ценности</h2>
-          <div class="arrow-down">
+          <h2 class="wow animate__animated animate__fadeInLeft">
+            Наши<br />ценности
+          </h2>
+          <div class="arrow-down wow animate__animated animate__fadeInDown">
             <span>↓</span>
           </div>
         </div>
@@ -40,7 +54,7 @@
   </section>
   <section class="statistics">
     <div class="container">
-      <div class="statistics-row">
+      <div class="statistics-row wow animate__animated animate__fadeInLeft">
         <div class="stat-item">
           <h2>83+</h2>
           <p>Реализованных проектов</p>
@@ -55,7 +69,7 @@
         </div>
       </div>
       <div class="divider"></div>
-      <div class="statistics-row">
+      <div class="statistics-row wow animate__animated animate__fadeInRight">
         <div class="stat-item">
           <h2>12,500</h2>
           <p>Кв м² спроектированных интерьеров</p>
@@ -75,23 +89,16 @@
     </div>
   </section>
   <section class="services">
-    <!-- <div class="slides">
-      <div class="slides-count"></div>
-      <div class="slides-item"></div>
-    </div>
-    <div class="media">
-      <h1>Наши услуги</h1>
-    </div> -->
     <HomeGallery />
   </section>
   <section class="projects">
     <div class="projects-container">
-      <h3>Наши проекты</h3>
+      <h3 class="wow animate__animated animate__fadeInLeft">Наши проекты</h3>
       <ProjectsSwiperComponent />
     </div>
   </section>
   <section class="reviews">
-    <h2>
+    <h2 class="wow animate__animated animate__fadeInRight">
       Отзывы наших<br />
       клиентов
     </h2>
@@ -99,7 +106,7 @@
     <ReviewsSliderComponent />
   </section>
   <section class="offer">
-    <h2>
+    <h2 class="wow animate__animated animate__fadeIn">
       Готовы создать<span class="arrow"
         ><img src="@/assets/images/home/offer-arrow.svg" alt="" /></span
       ><br />
@@ -115,9 +122,11 @@
   </section>
   <section class="process">
     <div class="container">
-      <h2>Наш процесс работы</h2>
+      <h2 class="wow animate__animated animate__fadeInLeft">
+        Наш процесс работы
+      </h2>
       <div class="process-grid">
-        <div class="process-item">
+        <div class="process-item wow animate__animated animate__fadeInRight">
           <div class="process-item-count">01</div>
           <div class="process-item-title">Консультация и обсуждение</div>
           <p>
@@ -126,7 +135,10 @@
             ожидания.
           </p>
         </div>
-        <div class="process-item">
+        <div
+          class="process-item wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.1s"
+        >
           <div class="process-item-count">02</div>
           <div class="process-item-title">Разработка концепции</div>
           <p>
@@ -135,7 +147,10 @@
             соответствовал вашим запросам.
           </p>
         </div>
-        <div class="process-item">
+        <div
+          class="process-item wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.2s"
+        >
           <div class="process-item-count">03</div>
           <div class="process-item-title">Подготовка проекта</div>
           <p>
@@ -143,7 +158,10 @@
             материалов и мебели. Всё, что нужно для реализации.
           </p>
         </div>
-        <div class="process-item process-item-moved">
+        <div
+          class="process-item process-item-moved wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.3s"
+        >
           <div class="process-item-count">04</div>
           <div class="process-item-title">Реализация проекта</div>
           <p>
@@ -152,7 +170,10 @@
             сроки.
           </p>
         </div>
-        <div class="process-item process-item-moved-mob">
+        <div
+          class="process-item process-item-moved-mob wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.4s"
+        >
           <div class="process-item-count">05</div>
           <div class="process-item-title">Завершение и сдача объекта</div>
           <p>
@@ -165,11 +186,11 @@
     </div>
   </section>
   <section class="faq">
-    <h2>FAQ</h2>
+    <h2 class="wow animate__animated animate__fadeInLeft">FAQ</h2>
     <FaqComponent />
   </section>
   <section class="news">
-    <h2>Последние новости</h2>
+    <h2 class="wow animate__animated animate__fadeInDown">Последние новости</h2>
     <NewsSwiperComponent />
   </section>
 </template>

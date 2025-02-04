@@ -204,7 +204,7 @@ a
     height: 21px
     transform: rotate(-90deg)
 
-  &:hover
+  &:active
     background: rgba(0, 0, 0, 0.8)
     color: white
     transition: 0.3s

@@ -3,7 +3,7 @@
     <button
       v-for="lang in availableLanguages"
       :key="lang"
-      @click="changeLang(lang)"
+      @click.stop="changeLang(lang)"
       :class="{ active: locale === lang }"
     >
       {{ lang.toUpperCase() }}

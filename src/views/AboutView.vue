@@ -1,9 +1,13 @@
 <template>
   <main class="main">
     <h1>
-      Создаём стильное
+      <span class="wow animate__animated animate__fadeInLeft"
+        >Создаём стильное
+      </span>
       <div class="devider">/</div>
-      <div class="space">пространство для вас</div>
+      <div class="space wow animate__animated animate__fadeInRightBig">
+        пространство для вас
+      </div>
     </h1>
     <h4>О нас</h4>
     <div class="main-image">
@@ -11,7 +15,9 @@
     </div>
   </main>
   <section class="design">
-    <h2>Дизайн и ремонт интерьеров на Лазурном Берегу</h2>
+    <h2 class="wow animate__animated animate__fadeInLeft">
+      Дизайн и ремонт интерьеров на Лазурном Берегу
+    </h2>
     <div class="content">
       <p>
         Мы создаём уникальные и функциональные пространства в Ницце, Каннах,
@@ -21,17 +27,23 @@
         внимание каждой детали и строго соблюдая сроки.
       </p>
       <div class="filler"></div>
-      <div class="image1"><img src="@/assets/images/about/2.jpg" alt="" /></div>
-      <div class="image2"><img src="@/assets/images/about/3.jpg" alt="" /></div>
+      <div class="image1 wow animate__animated animate__fadeInDownBig">
+        <img src="@/assets/images/about/2.jpg" alt="" />
+      </div>
+      <div class="image2 wow animate__animated animate__fadeInUp">
+        <img src="@/assets/images/about/3.jpg" alt="" />
+      </div>
     </div>
   </section>
   <section class="why">
-    <h2>Почему выбирают нас?</h2>
+    <h2 class="wow animate__animated animate__fadeInLeft">
+      Почему выбирают нас?
+    </h2>
     <WhyWeComponent />
   </section>
   <section class="rates">
     <div class="rates-first">
-      <div class="rates-top">
+      <div class="rates-top wow animate__animated animate__fadeInLeft">
         <div class="rates-item">
           <h2>83+</h2>
           <div class="separator"></div>
@@ -54,7 +66,7 @@
     </div>
     <div class="rates-second">
       <div class="filler"></div>
-      <div class="rates-bottom">
+      <div class="rates-bottom wow animate__animated animate__fadeInRight">
         <div class="rates-item">
           <h2>1 цель</h2>
           <div class="separator"></div>
@@ -69,9 +81,11 @@
     </div>
   </section>
   <section class="way">
-    <h2>Наш подход к работе</h2>
+    <h2 class="wow animate__animated animate__fadeInLeft">
+      Наш подход к работе
+    </h2>
     <div class="way-grid">
-      <div class="way-item">
+      <div class="way-item animate__animated animate__fadeInLeft">
         <div class="number">
           01 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -82,7 +96,10 @@
           пространство, которое идеально вам подойдёт.
         </p>
       </div>
-      <div class="way-item">
+      <div
+        class="way-item animate__animated animate__fadeInLeftBig"
+        data-wow-delay="0.1s"
+      >
         <div class="number">
           02 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -93,7 +110,10 @@
           и атмосферу Лазурного Берега.
         </p>
       </div>
-      <div class="way-item">
+      <div
+        class="way-item animate__animated animate__fadeInLeft"
+        data-wow-delay="0.2s"
+      >
         <div class="number">
           03 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -104,7 +124,10 @@
           этапе.
         </p>
       </div>
-      <div class="way-item">
+      <div
+        class="way-item animate__animated animate__fadeInLeftBig"
+        data-wow-delay="0.3s"
+      >
         <div class="number">
           04 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -115,7 +138,10 @@
           высокий уровень качества.
         </p>
       </div>
-      <div class="way-item">
+      <div
+        class="way-item animate__animated animate__fadeInLeft"
+        data-wow-delay="0.4s"
+      >
         <div class="number">
           05 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -130,7 +156,7 @@
   </section>
   <section class="team">
     <div class="team-top">
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/julien.jpg" alt="" />
         </div>
@@ -138,7 +164,7 @@
         <div class="separator"></div>
         <p>Главный архитектор</p>
       </div>
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/camile.jpg" alt="" />
         </div>
@@ -147,12 +173,12 @@
         <p>Дизайнер интерьеров</p>
       </div>
       <div class="filler"></div>
-      <h2>
+      <h2 class="wow animate__animated animate__fadeInLeft">
         Наша команда <img src="@/assets/images/about/arrow-down.svg" alt="" />
       </h2>
     </div>
     <div class="team-bottom">
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/emil.jpg" alt="" />
         </div>
@@ -160,7 +186,7 @@
         <div class="separator"></div>
         <p>Руководитель проектов</p>
       </div>
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/sophie.jpg" alt="" />
         </div>
@@ -168,7 +194,7 @@
         <div class="separator"></div>
         <p>Менеджер по работе с клиентами</p>
       </div>
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/tomas.jpg" alt="" />
         </div>
@@ -176,7 +202,7 @@
         <div class="separator"></div>
         <p>Инженер-конструктор</p>
       </div>
-      <div class="team-item">
+      <div class="team-item wow animate__animated animate__fadeIn">
         <div class="item-img">
           <img src="@/assets/images/about/clara.jpg" alt="" />
         </div>
@@ -187,7 +213,7 @@
     </div>
   </section>
   <div class="contact">
-    <h1>
+    <h1 class="wow animate__animated animate__fadeInLeft">
       Дизайн&nbsp;и&nbsp;ремонт<br />
       <span class="indent">созданные</span><br />
       <span class="indent">для вас</span>
@@ -220,6 +246,9 @@ main
   @media (max-width: 992px)
     padding-top: 6rem
     grid-template-columns: 10fr 2fr
+  @media (max-width: 992px)
+    padding-right: 0
+    padding-left: 0
   @media (max-width: 576px)
     padding-top: 6rem
   h1
@@ -235,10 +264,11 @@ main
       transform: translateY(6rem)
     @media (max-width: 768px)
       font-size: 4.9rem
+      padding-left: 20px
       transform: translateY(6.5rem)
     @media (max-width: 576px)
-      font-size: 3rem
-      transform: translateY(4rem)
+      font-size: 3.25rem
+      transform: translateY(3.7rem)
     div.devider
       color: $bgc-second
       display: inline
@@ -254,6 +284,11 @@ main
       display: none
   .main-image
     grid-area: main-image
+    @media (max-width: 576px)
+      min-height: 70vh
+    img
+      height: 100%
+      object-fit: cover
 
 // ------------------ desing -------------------
 
@@ -263,6 +298,10 @@ main
   h2
     color: $font-black
     text-align: left
+    @media (max-width: 768px)
+      font-size: 5rem
+    @media (max-width: 576px)
+      font-size: 4rem
   .content
     padding-top: 6.25rem
     display: grid

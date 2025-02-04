@@ -1,18 +1,47 @@
 <template>
   <div class="social-links">
-    <a href="#" aria-label="Facebook" target="_blank">
+    <a
+      href="#"
+      aria-label="Facebook"
+      target="_blank"
+      class="wow animate__animated animate__backInDown"
+    >
       <i class="fab fa-facebook-f"></i>
     </a>
-    <a href="#" aria-label="YouTube" target="_blank">
+    <a
+      href="#"
+      aria-label="YouTube"
+      target="_blank"
+      class="wow animate__animated animate__backInDown"
+      data-wow-delay="0.1s"
+    >
       <i class="fab fa-youtube"></i>
     </a>
-    <a href="#" aria-label="LinkedIn" target="_blank">
+    <a
+      href="#"
+      aria-label="LinkedIn"
+      target="_blank"
+      class="wow animate__animated animate__backInDown"
+      data-wow-delay="0.2s"
+    >
       <i class="fab fa-linkedin-in"></i>
     </a>
-    <a href="#" aria-label="X" target="_blank">
+    <a
+      href="#"
+      aria-label="X"
+      target="_blank"
+      class="wow animate__animated animate__backInDown"
+      data-wow-delay="0.3s"
+    >
       <i class="fa-brands fa-x-twitter"></i>
     </a>
-    <a href="#" aria-label="Instagram" target="_blank">
+    <a
+      href="#"
+      aria-label="Instagram"
+      target="_blank"
+      class="wow animate__animated animate__backInDown"
+      data-wow-delay="0.4s"
+    >
       <i class="fab fa-instagram"></i>
     </a>
   </div>

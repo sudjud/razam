@@ -1,10 +1,15 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ open: isOpen }">
     <div class="container">
       <!-- Логотип -->
-      <div class="logo">
+      <div class="logo" :class="{ open: isOpen }">
         <router-link to="/">
           <img src="@/assets/logo.png" alt="Razam" />
+        </router-link>
+      </div>
+      <div class="logo logo-white" :class="{ open: isOpen }">
+        <router-link to="/">
+          <img src="@/assets/logo-white.png" alt="Razam" />
         </router-link>
       </div>
 
@@ -15,13 +20,13 @@
         class="hamburger"
         :aria-expanded="isOpen"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
+        <span :class="{ open: isOpen }"></span>
       </button>
 
       <!-- Навигационное меню -->
-      <nav class="nav-menu" :class="{ open: isOpen }">
+      <nav @click="closeMenu" class="nav-menu" :class="{ open: isOpen }">
         <ul>
           <li>
             <router-link
@@ -71,7 +76,7 @@
               >{{ $t("menu.contact") }}</router-link
             >
           </li>
-          <li>
+          <li class="lang-switch">
             <LangSwitchComponent />
           </li>
           <li>
@@ -110,6 +115,7 @@ const closeMenu = (): void => {
   position: fixed
   width: 100%
   display: flex
+  height: 70px
   justify-content: space-between
   align-items: center
   padding: 10px 20px 5px 20px
@@ -120,12 +126,29 @@ const closeMenu = (): void => {
     align-items: center
     width: 100%
     padding: 0
+  &.open
+    background-color: rgba(black, 0.7)
 
 /* Логотип */
 .logo img
   height: 50px
   a
     height: 0
+
+.logo-white img
+  height: 50px
+  a
+    height: 0
+
+.logo
+  &.open
+    display: none
+
+.logo-white
+  display: none
+  &.open
+    display: block
+
 
 /* Кнопка гамбургера */
 .hamburger
@@ -141,6 +164,8 @@ const closeMenu = (): void => {
     height: 3px
     background-color: $font-black
     transition: transform 0.3s ease
+    &.open
+      background-color: $bgc-main
 
   &.open span:nth-child(1)
     transform: rotate(45deg) translate(5.65px, 5.65px)
@@ -154,11 +179,11 @@ const closeMenu = (): void => {
 /* Навигационное меню */
 .nav-menu
   position: absolute
-  top: 60px
   right: 0
-  background-color: red
+  top: 70px
+  background-color: rgba(0, 0, 0, 0.7)
   width: 100%
-  height: calc(100vh - 60px)
+  height: calc(100vh - 70px)
   display: none
   flex-direction: column
   align-items: center
@@ -168,25 +193,24 @@ const closeMenu = (): void => {
 
   &.open
     display: flex
-
   ul
     list-style: none
     padding: 0
     margin: 0
+    margin-bottom: 120px
     text-align: center
-
     li
       margin: 10px 0
       font-size: 18px
-
       a
         text-decoration: none
-        color: $font-grey
+        color: $bgc-main
         font-weight: 500
         transition: color 0.3s ease
-
         &.active
-          color: $font-black
+          color: rgba($font-white, 0.6)
+    .lang-switch
+      margin-top: 40px
 
 .social-links
   position: absolute

@@ -1,19 +1,25 @@
 <template>
   <div class="values-list">
     <div class="values-list-top">
-      <div class="value-item">
+      <div class="value-item wow animate__animated animate__fadeInBottomLeft">
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>
         <p>Открытость и<br />честность</p>
       </div>
-      <div class="value-item">
+      <div
+        class="value-item wow animate__animated animate__fadeInBottomLeft"
+        data-wow-delay="0.1s"
+      >
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>
         <p>Точность в<br />сроках</p>
       </div>
-      <div class="value-item">
+      <div
+        class="value-item wow animate__animated animate__fadeInBottomLeft"
+        data-wow-delay="0.2s"
+      >
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>
@@ -21,20 +27,29 @@
       </div>
     </div>
     <div class="values-list-bottom">
-      <div class="value-item">
+      <div
+        class="value-item wow animate__animated animate__fadeInBottomLeft"
+        data-wow-delay="0.3s"
+      >
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>
         <p>Практичность и<br />удобство</p>
       </div>
-      <div class="value-item">
+      <div
+        class="value-item wow animate__animated animate__fadeInBottomLeft"
+        data-wow-delay="0.4s"
+      >
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>
         <p>Индивидуальные<br />решения</p>
       </div>
 
-      <div class="value-item">
+      <div
+        class="value-item wow animate__animated animate__fadeInBottomLeft"
+        data-wow-delay="0.5s"
+      >
         <span class="circle"
           ><img src="@/assets/images/home/diag-arrow.png" alt="arrow"
         /></span>

@@ -13,7 +13,13 @@
         <swiper
           ref="swiper"
           :breakpoints="breakpoints"
-          :loop="true"
+          :loop="false"
+          :speed="2000"
+          :autoplay="{
+            delay: 0,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+          }"
           @swiper="bindSwiperInstance"
         >
           <swiper-slide v-for="(slide, index) in slides" :key="index">
@@ -35,11 +41,11 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import { Swiper as SwiperInstance } from "swiper/types";
 import SwiperCore from "swiper";
 import "swiper/swiper-bundle.css";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import slide1 from "@/assets/images/home/projects/1.jpg";
 import slide2 from "@/assets/images/home/projects/2.jpg";
 
-SwiperCore.use([Navigation]);
+SwiperCore.use([Navigation, Autoplay]);
 
 export default defineComponent({
   name: "ProjectsSlider",
@@ -91,11 +97,11 @@ export default defineComponent({
     const breakpoints = ref({
       300: {
         slidesPerView: 1.5,
-        spaceBetween: 0,
+        spaceBetween: 15,
       },
       1920: {
         slidesPerView: 2.5,
-        spaceBetween: 20,
+        spaceBetween: 15,
       },
     });
 
@@ -118,11 +124,11 @@ export default defineComponent({
   .container
     justify-content: space-between
     padding-right: 0
+    @media (max-width: 992px)
+      padding-left: 50px
     @media (max-width: 768px)
       padding-left: 0px
       display: block
-    @media (max-width: 992px)
-      padding-left: 50px
   h2
     font-size: 36px
     font-weight: bold
@@ -138,11 +144,13 @@ export default defineComponent({
     align-items: center
     justify-content: center
     padding-left: 80px
-    @media (max-width: 768px)
-      padding-left: 30px
-      width: 100%
+    @media (max-width: 1200px)
+      padding-left: 70px
     @media (max-width: 992px)
-      padding-left: 0
+      padding-left: 30px
+    @media (max-width: 768px)
+      padding-left: 20px
+      width: 100%
 
   .slider-buttons
     align-self: flex-end
@@ -160,7 +168,7 @@ export default defineComponent({
     display: inline-block
     font-size: 1rem
 
-    &:hover
+    &:active
       background: rgba(0, 0, 0, 0.8)
       color: white
       transition: 0.3s
@@ -175,7 +183,6 @@ export default defineComponent({
   align-items: center
   border-radius: 8px
   text-align: left
-  padding: 16px
 
 .slide-content
   img

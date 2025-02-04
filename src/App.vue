@@ -32,7 +32,4 @@ onUnmounted(() => {
 });
 </script>
 
-<style lang="sass">
-#app
-  font-family: Avenir, Helvetica, Arial, sans-serif
-</style>
+<style lang="sass"></style>
