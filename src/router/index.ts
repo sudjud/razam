@@ -3,6 +3,7 @@ import HomeView from "@/views/HomeView.vue";
 import AboutView from "@/views/AboutView.vue";
 import ServicesView from "@/views/ServicesView.vue";
 import PortfolioView from "@/views/PortfolioView.vue";
+import ProjectView from "@/views/ProjectView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -25,11 +26,28 @@ const routes: Array<RouteRecordRaw> = [
     name: "Portfolio",
     component: PortfolioView,
   },
+  {
+    path: "/portfolio/:slug",
+    name: "project",
+    component: ProjectView,
+    props: true,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        if (savedPosition) {
+          resolve(savedPosition);
+        } else {
+          resolve({ top: 0, behavior: "smooth" });
+        }
+      }, 100);
+    });
+  },
 });
 
 export default router;

@@ -1,13 +1,17 @@
 <template>
   <main class="services-main">
     <div class="photos">
-      <img class="first" src="@/assets/images/services/1.jpg" alt="" />
+      <img
+        class="first wow animate__animated animate__fadeInUp"
+        src="@/assets/images/services/1.jpg"
+        alt=""
+      />
       <img class="second" src="@/assets/images/services/2.jpg" alt="" />
     </div>
     <div class="content">
       <div class="content-wrapper">
         <p class="design">Дизайн, стиль <br />и комфорт вместе</p>
-        <h1>
+        <h1 class="wow animate__animated animate__fadeInRight">
           Создайте<br />
           уникальный<br />
           <span>/</span> интерьер
@@ -25,7 +29,7 @@
       </div>
       <div class="razam">
         <img
-          class="arrow"
+          class="arrow wow animate__animated animate__fadeInDownBig"
           src="@/assets/images/services/arrow-down.svg"
           alt=""
         />
@@ -39,9 +43,11 @@
   </section>
   <section class="process">
     <div class="container">
-      <h2>Наш процесс работы</h2>
+      <h2 class="wow animate__animated animate__fadeInLeft">
+        Наш процесс работы
+      </h2>
       <div class="process-grid">
-        <div class="process-item">
+        <div class="process-item wow animate__animated animate__fadeInRight">
           <div class="process-item-count">01</div>
           <div class="process-item-title">Консультация и обсуждение</div>
           <p>
@@ -50,7 +56,10 @@
             ожидания.
           </p>
         </div>
-        <div class="process-item">
+        <div
+          class="process-item wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.1s"
+        >
           <div class="process-item-count">02</div>
           <div class="process-item-title">Разработка концепции</div>
           <p>
@@ -59,7 +68,10 @@
             соответствовал вашим запросам.
           </p>
         </div>
-        <div class="process-item">
+        <div
+          class="process-item wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.2s"
+        >
           <div class="process-item-count">03</div>
           <div class="process-item-title">Подготовка проекта</div>
           <p>
@@ -67,7 +79,10 @@
             материалов и мебели. Всё, что нужно для реализации.
           </p>
         </div>
-        <div class="process-item process-item-moved">
+        <div
+          class="process-item process-item-moved wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.3s"
+        >
           <div class="process-item-count">04</div>
           <div class="process-item-title">Реализация проекта</div>
           <p>
@@ -76,7 +91,10 @@
             сроки.
           </p>
         </div>
-        <div class="process-item process-item-moved-mob">
+        <div
+          class="process-item process-item-moved-mob wow animate__animated animate__fadeInRight"
+          data-wow-delay="0.4s"
+        >
           <div class="process-item-count">05</div>
           <div class="process-item-title">Завершение и сдача объекта</div>
           <p>
@@ -91,7 +109,10 @@
   <section class="offer">
     <h2>
       Готовы создать<span class="arrow"
-        ><img src="@/assets/images/home/offer-arrow.svg" alt="" /></span
+        ><img
+          class="wow animate__animated animate__fadeInBottomLeft"
+          src="@/assets/images/home/offer-arrow.svg"
+          alt="" /></span
       ><br />
       <div class="decor">
         ваш идеальный<br />
@@ -112,7 +133,7 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
 <style lang="sass" scoped>
 .services-main
   +regpad
-  padding-top: 15rem
+  padding-top: 10rem
   display: grid
   gap: 1.5rem
   grid-template-columns: 6.5fr 5.5fr

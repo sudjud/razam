@@ -125,13 +125,15 @@ const isActive = (path) => route.path === path;
 <style lang="sass" scoped>
 
 footer
+  +regpad
   display: grid
   grid-template-columns: 2fr 1.5fr 2.5fr
   grid-template-rows: 1fr auto
   grid-column-gap: 0px
   grid-row-gap: 0px
   background-color: $font-black
-  padding: 14rem 6.25rem 3.5rem 6.25rem
+  padding-top: 14rem
+  padding-bottom: 3.5rem
   @media (max-width: 992px)
     grid-template-columns: 1fr
   .links

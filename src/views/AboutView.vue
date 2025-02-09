@@ -85,7 +85,7 @@
       Наш подход к работе
     </h2>
     <div class="way-grid">
-      <div class="way-item animate__animated animate__fadeInLeft">
+      <div class="way-item wow animate__animated animate__fadeInLeft">
         <div class="number">
           01 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -97,7 +97,7 @@
         </p>
       </div>
       <div
-        class="way-item animate__animated animate__fadeInLeftBig"
+        class="way-item wow animate__animated animate__fadeInLeft"
         data-wow-delay="0.1s"
       >
         <div class="number">
@@ -111,7 +111,7 @@
         </p>
       </div>
       <div
-        class="way-item animate__animated animate__fadeInLeft"
+        class="way-item wow animate__animated animate__fadeInLeft"
         data-wow-delay="0.2s"
       >
         <div class="number">
@@ -124,10 +124,7 @@
           этапе.
         </p>
       </div>
-      <div
-        class="way-item animate__animated animate__fadeInLeftBig"
-        data-wow-delay="0.3s"
-      >
+      <div class="way-item wow animate__animated animate__fadeInLeft">
         <div class="number">
           04 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -139,8 +136,8 @@
         </p>
       </div>
       <div
-        class="way-item animate__animated animate__fadeInLeft"
-        data-wow-delay="0.4s"
+        class="way-item wow animate__animated animate__fadeInLeft"
+        data-wow-delay="0.1s"
       >
         <div class="number">
           05 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
@@ -289,6 +286,7 @@ main
     img
       height: 100%
       object-fit: cover
+      border-radius: 10px
 
 // ------------------ desing -------------------
 

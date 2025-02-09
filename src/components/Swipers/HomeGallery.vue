@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="gallery-sm">
-    <h2>Наши услуги</h2>
+    <h2 class="wow animate__animated animate__fadeInLeft">Наши услуги</h2>
     <div class="slider-gallery">
       <Swiper
         :slides-per-view="1.05"

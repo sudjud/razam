@@ -150,9 +150,9 @@ a
   &:hover h4
     text-decoration: underline
   article
-    max-width: 35rem
     display: grid
-    grid-template-columns: 1fr
+    *
+      max-width: 100%
     h5
       font-size: 1rem
       color: $font-grey
@@ -168,10 +168,13 @@ a
     .meta
       display: flex
       justify-content: space-between
-      padding: 8px 23px 35px 23px
+      padding: 8px 23px 15px 23px
       span
         font-size: 1rem
         color: $font-grey
+    .image
+      img
+        width: 100%
 
 .slider-buttons
   display: flex

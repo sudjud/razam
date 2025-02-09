@@ -29,7 +29,11 @@
             <div class="img" :class="{ open: expandedItem === index }">
               <img :src="item.preview" alt="" />
             </div>
-            <p class="name">{{ item.name }}</p>
+            <p class="name">
+              <span @click="router.push(`/portfolio/${item.slug}`)">{{
+                item.name
+              }}</span>
+            </p>
             <p class="year">{{ item.year }}</p>
             <p class="type">{{ item.type }}</p>
             <div :class="{ open: expandedItem === index }" class="arrow">
@@ -45,6 +49,7 @@
 <script setup>
 import { ref, computed } from "vue";
 import { projects } from "@/data/projects.js";
+import router from "@/router";
 
 const categories = computed(() => {
   return [...new Set(projects.map((project) => project.category))];
@@ -130,6 +135,11 @@ $transition-speed: 0.3s
           &.open
             height: 100%
             opacity: 1
+        .name
+          span
+            cursor: pointer
+            &:hover
+              text-decoration: underline
         .year
           justify-self: center
         .arrow
