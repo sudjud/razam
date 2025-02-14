@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <h1>
-      <span class="wow reveal-sb">Создаём стильное </span>
+      <span class="wow reveal-bb">Создаём стильное </span>
       <div class="devider">/</div>
       <div class="space wow reveal-sw">пространство для вас</div>
     </h1>
@@ -11,8 +11,10 @@
     </div>
   </main>
   <section class="design">
-    <h2 class="wow animate__animated animate__fadeInLeft">
-      Дизайн и ремонт интерьеров на Лазурном Берегу
+    <h2>
+      <span class="wow reveal-bb"
+        >Дизайн и ремонт интерьеров на Лазурном Берегу</span
+      >
     </h2>
     <div class="content">
       <p>
@@ -23,23 +25,21 @@
         внимание каждой детали и строго соблюдая сроки.
       </p>
       <div class="filler"></div>
-      <div class="image1 wow animate__animated animate__fadeInDownBig">
+      <div class="image1">
         <img src="@/assets/images/about/2.jpg" alt="" />
       </div>
-      <div class="image2 wow animate__animated animate__fadeInUp">
+      <div class="image2">
         <img src="@/assets/images/about/3.jpg" alt="" />
       </div>
     </div>
   </section>
   <section class="why">
-    <h2 class="wow animate__animated animate__fadeInLeft">
-      Почему выбирают нас?
-    </h2>
+    <h2><span class="wow reveal-bb">Почему выбирают нас?</span></h2>
     <WhyWeComponent />
   </section>
   <section class="rates">
     <div class="rates-first">
-      <div class="rates-top wow animate__animated animate__fadeInLeft">
+      <div class="rates-top">
         <div class="rates-item">
           <h2>83+</h2>
           <div class="separator"></div>
@@ -62,7 +62,7 @@
     </div>
     <div class="rates-second">
       <div class="filler"></div>
-      <div class="rates-bottom wow animate__animated animate__fadeInRight">
+      <div class="rates-bottom">
         <div class="rates-item">
           <h2>1 цель</h2>
           <div class="separator"></div>
@@ -77,11 +77,11 @@
     </div>
   </section>
   <section class="way">
-    <h2 class="wow animate__animated animate__fadeInLeft">
-      Наш подход к работе
+    <h2>
+      <span class="wow reveal-bb">Наш подход к работе</span>
     </h2>
     <div class="way-grid">
-      <div class="way-item wow animate__animated animate__fadeInLeft">
+      <div class="way-item">
         <div class="number">
           01 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -92,10 +92,7 @@
           пространство, которое идеально вам подойдёт.
         </p>
       </div>
-      <div
-        class="way-item wow animate__animated animate__fadeInLeft"
-        data-wow-delay="0.1s"
-      >
+      <div class="way-item">
         <div class="number">
           02 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -106,10 +103,7 @@
           и атмосферу Лазурного Берега.
         </p>
       </div>
-      <div
-        class="way-item wow animate__animated animate__fadeInLeft"
-        data-wow-delay="0.2s"
-      >
+      <div class="way-item">
         <div class="number">
           03 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -120,7 +114,7 @@
           этапе.
         </p>
       </div>
-      <div class="way-item wow animate__animated animate__fadeInLeft">
+      <div class="way-item">
         <div class="number">
           04 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -131,10 +125,7 @@
           высокий уровень качества.
         </p>
       </div>
-      <div
-        class="way-item wow animate__animated animate__fadeInLeft"
-        data-wow-delay="0.1s"
-      >
+      <div class="way-item">
         <div class="number">
           05 <span><img src="@/assets/images/about/arrow.svg" alt="" /></span>
         </div>
@@ -149,7 +140,7 @@
   </section>
   <section class="team">
     <div class="team-top">
-      <div class="team-item wow animate__animated animate__fadeIn">
+      <div class="team-item">
         <div class="item-img">
           <img src="@/assets/images/about/julien.jpg" alt="" />
         </div>
@@ -157,7 +148,7 @@
         <div class="separator"></div>
         <p>Главный архитектор</p>
       </div>
-      <div class="team-item wow animate__animated animate__fadeIn">
+      <div class="team-item">
         <div class="item-img">
           <img src="@/assets/images/about/camile.jpg" alt="" />
         </div>
@@ -166,8 +157,9 @@
         <p>Дизайнер интерьеров</p>
       </div>
       <div class="filler"></div>
-      <h2 class="wow animate__animated animate__fadeInLeft">
-        Наша команда <img src="@/assets/images/about/arrow-down.svg" alt="" />
+      <h2>
+        <span class="wow reveal-bb">Наша команда</span>
+        <img src="@/assets/images/about/arrow-down.svg" alt="" />
       </h2>
     </div>
     <div class="team-bottom">
@@ -301,6 +293,8 @@ main
     grid-template-columns: 2fr 1fr 3fr 6fr
     gap: 20px
     align-items: flex-end
+    @media (max-width: 1750px)
+      grid-template-columns: 2.7fr 0.3fr 3fr 6fr
     @media (max-width: 1400px)
       grid-template-columns: 2.7fr 0.3fr 3fr 6fr
     @media (max-width: 1200px)
@@ -351,12 +345,15 @@ section.rates
       grid-template-columns: 1fr
       padding-bottom: 2rem
     .rates-img
+      border-radius: 12px
       img
-        width: 100%
+        height: 100%
+        border-radius: 12px
+        object-fit: cover
   .rates-second
     display: grid
     grid-template-columns: 7fr 5fr
-    margin-top: 5rem
+    margin-top: 3rem
     @media (max-width: 768px)
       grid-template-columns: 1fr
       margin-top: 2rem

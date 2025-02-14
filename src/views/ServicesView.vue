@@ -1,20 +1,18 @@
 <template>
   <main class="services-main">
     <div class="photos">
-      <img
-        class="first wow animate__animated animate__fadeInUp"
-        src="@/assets/images/services/1.jpg"
-        alt=""
-      />
+      <img class="first" src="@/assets/images/services/1.jpg" alt="" />
       <img class="second" src="@/assets/images/services/2.jpg" alt="" />
     </div>
     <div class="content">
       <div class="content-wrapper">
         <p class="design">Дизайн, стиль <br />и комфорт вместе</p>
-        <h1 class="wow animate__animated animate__fadeInRight">
-          Создайте<br />
-          уникальный<br />
-          <span>/</span> интерьер
+        <h1>
+          <span class="wow reveal-bb"
+            >Создайте<br />
+            уникальный<br />
+            <span class="slash">/</span> интерьер</span
+          >
         </h1>
         <p class="desc">
           Мы — команда экспертов в области дизайна и ремонта, работающая на
@@ -25,7 +23,20 @@
           Каждый проект разрабатывается с учётом ваших предпочтений,
           потребностей и особенностей объекта.
         </p>
-        <p class="read-more">Читать больше</p>
+        <p class="desc read-more-text" :class="{ open: isOpen }">
+          Наш опыт работы в Ницце, Каннах и Антибе позволяет нам учитывать
+          специфику местной архитектуры и создавать интерьеры, идеально
+          вписывающиеся в атмосферу Лазурного Берега. Используя современные
+          технологии, качественные материалы и проверенные методы, мы воплощаем
+          ваши идеи в жизнь, создавая комфортные и эстетически привлекательные
+          пространства. Независимо от масштаба проекта — будь то небольшая
+          квартира или роскошная вилла, мы стремимся превзойти ожидания наших
+          клиентов. Свяжитесь с нами, чтобы начать ваш проект уже сегодня и
+          сделать ваш интерьер отражением вашего стиля и характера.
+        </p>
+        <p @click="toggleIsOpen" class="read-more">
+          {{ isOpen ? "Скрыть" : "Читать больше" }}
+        </p>
       </div>
       <div class="razam">
         <img
@@ -43,11 +54,11 @@
   </section>
   <section class="process">
     <div class="container">
-      <h2 class="wow animate__animated animate__fadeInLeft">
-        Наш процесс работы
+      <h2>
+        <span class="wow reveal-bb">Наш процесс работы</span>
       </h2>
       <div class="process-grid">
-        <div class="process-item wow animate__animated animate__fadeInRight">
+        <div class="process-item">
           <div class="process-item-count">01</div>
           <div class="process-item-title">Консультация и обсуждение</div>
           <p>
@@ -56,10 +67,7 @@
             ожидания.
           </p>
         </div>
-        <div
-          class="process-item wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.1s"
-        >
+        <div class="process-item">
           <div class="process-item-count">02</div>
           <div class="process-item-title">Разработка концепции</div>
           <p>
@@ -68,10 +76,7 @@
             соответствовал вашим запросам.
           </p>
         </div>
-        <div
-          class="process-item wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.2s"
-        >
+        <div class="process-item">
           <div class="process-item-count">03</div>
           <div class="process-item-title">Подготовка проекта</div>
           <p>
@@ -79,10 +84,7 @@
             материалов и мебели. Всё, что нужно для реализации.
           </p>
         </div>
-        <div
-          class="process-item process-item-moved wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.3s"
-        >
+        <div class="process-item process-item-moved">
           <div class="process-item-count">04</div>
           <div class="process-item-title">Реализация проекта</div>
           <p>
@@ -91,10 +93,7 @@
             сроки.
           </p>
         </div>
-        <div
-          class="process-item process-item-moved-mob wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.4s"
-        >
+        <div class="process-item process-item-moved-mob">
           <div class="process-item-count">05</div>
           <div class="process-item-title">Завершение и сдача объекта</div>
           <p>
@@ -128,6 +127,13 @@
 
 <script setup>
 import HomeGallery from "@/components/Swipers/HomeGallery.vue";
+import { ref } from "vue";
+
+const isOpen = ref(false);
+
+const toggleIsOpen = () => {
+  isOpen.value = !isOpen.value;
+};
 </script>
 
 <style lang="sass" scoped>
@@ -150,12 +156,12 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
       width: 100%
     .second
       transform: translateY(550px)
-      @media (max-width: 1400px)
-        transform: translateY(350px)
+      @media (max-width: 1500px)
+        transform: translateY(400px)
       @media (max-width: 1200px)
-        transform: translateY(300px)
+        transform: translateY(320px)
       @media (max-width: 992px)
-        transform: translateY(250px)
+        transform: translateY(280px)
       @media (max-width: 768px)
         font-size: 4rem
       @media (max-width: 576px)
@@ -164,13 +170,12 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
     .content-wrapper
       .design
       h1
-        color: $font-black
         text-align: right
         @media (max-width: 992px)
           font-size: 7rem
         @media (max-width: 768px)
           font-size: 4rem
-        span
+        span.slash
           color: $bgc-second
       .desc
         color: $font-grey
@@ -179,6 +184,13 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
         color: $font-black
         margin: 0
         display: inline
+      .read-more-text
+        max-height: 0
+        overflow: hidden
+        transition-duration: 0.3s
+        &.open
+          transition-duration: 0.3s
+          max-height: 500px
     .razam
       display: flex
       flex-direction: column
@@ -275,28 +287,38 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
   padding: 6.75rem 14.9rem 5.1rem 14.9rem
   margin-top: 15rem
   margin-bottom: 15rem
+  @media (max-width: 1100px)
+    padding: 6.75rem 10rem 5.1rem 10rem
   @media (max-width: 992px)
     max-width: calc(100% - 100px)
-    padding: 6.75rem 5rem 5.1rem 5rem
+    padding: 6.75rem 7rem 5.1rem 7rem
   @media (max-width: 768px)
     max-width: calc(100% - 100px)
   @media (max-width: 576px)
     max-width: calc(100% - 40px)
+    padding: 6.75rem 2rem 5.1rem 2rem
   h2
     color: $font-black
     line-height: 7.5rem
-    @media (max-width: 1500px)
+    @media (max-width: 1640px)
       font-size: 5rem
       line-height: 6rem
+    @media (max-width: 660px)
+      font-size: 4rem
+      line-height: 5rem
     .decor
       margin-left: 12rem
       @media (max-width: 992px)
-        margin-left: 0
+        margin-left: 5rem
     .arrow
       margin-left: 40px
       margin-top: 20px
-      @media (max-width: 992px)
-        display: none
+      @media (max-width: 660px)
+        margin-left: 10px
+      img
+        width: 4rem
+        @media (max-width: 660px)
+          width: 3rem
   p
     position: absolute
     bottom: 1rem
@@ -305,8 +327,6 @@ import HomeGallery from "@/components/Swipers/HomeGallery.vue";
     font-size: 1.25rem
     color: $font-grey
     max-width: 17.25rem
-    @media (max-width: 1500px)
-      left: 50rem
     @media (max-width: 992px)
       display: none
 </style>

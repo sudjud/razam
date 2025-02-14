@@ -1,14 +1,13 @@
 <template>
   <main class="main">
     <h1>
-      <div class="first wow animate__animated animate__fadeInLeft">
-        Наши <br />
-        проекты<span class="slash">/</span>
+      <div class="first">
+        <span class="wow reveal-bb">Наши <br />проекты</span
+        ><span class="slash">/</span>
       </div>
-      <div class="second wow animate__animated animate__fadeInRightBig">
+      <div class="second">
         <br />
-        ваше <br />
-        вдохновение
+        <span class="wow reveal-bb">ваше <br />вдохновение</span>
       </div>
     </h1>
     <div class="desc">
@@ -22,12 +21,12 @@
     <img src="@/assets/images/portfolio/1.jpg" alt="" />
   </section>
   <section class="portfolio">
-    <h2 class="wow animate__animated animate__fadeInRight">Портфолио</h2>
+    <h2><span class="wow reveal-bb">Портфолио</span></h2>
     <TabsPortfolioComponent />
   </section>
   <section class="process">
-    <h2 class="wow animate__animated animate__fadeInLeft">
-      Наш процесс работы
+    <h2>
+      <span class="wow reveal-bb">Наш процесс работы</span>
     </h2>
     <div class="process-columns">
       <div class="process-column">

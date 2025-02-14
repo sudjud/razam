@@ -17,7 +17,7 @@
         >
         <span class="top-last">{{ padNumber(items.length) }}</span>
       </span>
-      <h2><span class="wow reveal-sb">Наши услуги</span></h2>
+      <h2><span class="wow reveal-bb">Наши услуги</span></h2>
     </div>
     <div class="display">
       <div class="buttons">
@@ -49,7 +49,7 @@
     </div>
   </div>
   <div class="gallery-sm">
-    <h2><span class="wow reveal-sb">Наши услуги</span></h2>
+    <h2><span class="wow reveal-bb">Наши услуги</span></h2>
     <div class="slider-gallery">
       <Swiper
         :slides-per-view="1.05"

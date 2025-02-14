@@ -20,7 +20,7 @@
       </div>
       <div class="filler"></div>
       <div class="text-content">
-        <h3 class="wow reveal-sg">
+        <h3 class="wow reveal-sb">
           {{ $t("home.desc") }}
         </h3>
         <p>
@@ -52,7 +52,7 @@
       <div class="main">
         <div class="title-block">
           <h2>
-            <span class="wow reveal-mb">Наши<br />ценности</span>
+            <span class="wow reveal-bb">Наши<br />ценности</span>
           </h2>
           <div class="arrow-down">
             <span>↓</span>
@@ -107,13 +107,13 @@
   </section>
   <section class="projects">
     <div class="projects-container">
-      <h3><span class="wow reveal-sb">Наши проекты</span></h3>
+      <h3><span class="wow reveal-bb">Наши проекты</span></h3>
       <ProjectsSwiperComponent />
     </div>
   </section>
   <section class="reviews">
     <h2>
-      <span class="wow reveal-sb"
+      <span class="wow reveal-bb"
         >Отзывы наших<br />
         клиентов</span
       >
@@ -139,10 +139,10 @@
   <section class="process">
     <div class="container">
       <h2>
-        <span class="wow reveal-sb">Наш процесс работы</span>
+        <span class="wow reveal-bb">Наш процесс работы</span>
       </h2>
       <div class="process-grid">
-        <div class="process-item wow animate__animated animate__fadeInRight">
+        <div class="process-item">
           <div class="process-item-count">01</div>
           <div class="process-item-title">Консультация и обсуждение</div>
           <p>
@@ -151,10 +151,7 @@
             ожидания.
           </p>
         </div>
-        <div
-          class="process-item wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.1s"
-        >
+        <div class="process-item">
           <div class="process-item-count">02</div>
           <div class="process-item-title">Разработка концепции</div>
           <p>
@@ -163,10 +160,7 @@
             соответствовал вашим запросам.
           </p>
         </div>
-        <div
-          class="process-item wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.2s"
-        >
+        <div class="process-item">
           <div class="process-item-count">03</div>
           <div class="process-item-title">Подготовка проекта</div>
           <p>
@@ -174,10 +168,7 @@
             материалов и мебели. Всё, что нужно для реализации.
           </p>
         </div>
-        <div
-          class="process-item process-item-moved wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.3s"
-        >
+        <div class="process-item process-item-moved">
           <div class="process-item-count">04</div>
           <div class="process-item-title">Реализация проекта</div>
           <p>
@@ -186,10 +177,7 @@
             сроки.
           </p>
         </div>
-        <div
-          class="process-item process-item-moved-mob wow animate__animated animate__fadeInRight"
-          data-wow-delay="0.4s"
-        >
+        <div class="process-item process-item-moved-mob">
           <div class="process-item-count">05</div>
           <div class="process-item-title">Завершение и сдача объекта</div>
           <p>
@@ -202,11 +190,11 @@
     </div>
   </section>
   <section class="faq">
-    <h2><span class="wow reveal-sb">FAQ</span></h2>
+    <h2><span class="wow reveal-bb">FAQ</span></h2>
     <FaqComponent />
   </section>
   <section class="news">
-    <h2><span class="wow reveal-sb">Последние новости</span></h2>
+    <h2><span class="wow reveal-bb">Последние новости</span></h2>
     <NewsSwiperComponent />
   </section>
 </template>
