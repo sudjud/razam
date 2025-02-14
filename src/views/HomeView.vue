@@ -5,8 +5,10 @@
         <SocialMedias />
       </div>
       <div class="content">
-        <h1 class="wow animate__animated animate__fadeInLeft">
-          Дизайн и&nbsp;ремонт на&nbsp;Лазурном Берегу
+        <h1>
+          <span class="wow reveal-sw"
+            >Дизайн и&nbsp;ремонт на&nbsp;Лазурном Берегу</span
+          >
         </h1>
       </div>
     </div>
@@ -14,14 +16,11 @@
   <section class="expert-design">
     <div class="container">
       <div class="image-wrapper">
-        <img
-          class="wow animate__animated animate__fadeInLeft"
-          src="@/assets/images/home/2.jpg"
-          alt="Interior"
-        />
+        <img src="@/assets/images/home/2.jpg" alt="Interior" />
       </div>
-      <div class="text-content wow animate__animated animate__fadeInRight">
-        <h3>
+      <div class="filler"></div>
+      <div class="text-content">
+        <h3 class="wow reveal-sg">
           {{ $t("home.desc") }}
         </h3>
         <p>
@@ -30,7 +29,21 @@
         <p>
           {{ $t("home.fullDesc2") }}
         </p>
-        <span class="read-more">Читать больше</span>
+        <p class="read-more-text" :class="{ open: isOpen }">
+          Наш подход включает использование инновационных технологий и
+          тщательное планирование каждого этапа. Мы сотрудничаем с проверенными
+          подрядчиками и поставщиками, чтобы обеспечить высокое качество
+          исполнения и надежность.<br /><br />
+          Независимо от масштаба проекта, будь то уютная квартира, просторный
+          дом или коммерческое помещение, мы стремимся создать пространство,
+          которое станет отражением вашего стиля, подчеркнёт индивидуальность и
+          будет радовать вас долгие годы.<br /><br />
+          Свяжитесь с нами, чтобы начать ваш проект и преобразить ваше
+          пространство.
+        </p>
+        <span @click="toggleIsOpen" class="read-more">{{
+          isOpen ? "Скрыть" : "Читать больше"
+        }}</span>
       </div>
     </div>
   </section>
@@ -38,10 +51,10 @@
     <div class="container">
       <div class="main">
         <div class="title-block">
-          <h2 class="wow animate__animated animate__fadeInLeft">
-            Наши<br />ценности
+          <h2>
+            <span class="wow reveal-mb">Наши<br />ценности</span>
           </h2>
-          <div class="arrow-down wow animate__animated animate__fadeInDown">
+          <div class="arrow-down">
             <span>↓</span>
           </div>
         </div>
@@ -52,33 +65,33 @@
       <ValuesArrowsComponent />
     </div>
   </section>
-  <section class="statistics">
+  <!-- <section class="statistics">
     <div class="container">
-      <div class="statistics-row wow animate__animated animate__fadeInLeft">
-        <div class="stat-item">
+      <div class="statistics-row">
+        <div class="wow stat-item">
           <h2>83+</h2>
           <p>Реализованных проектов</p>
         </div>
-        <div class="stat-item">
+        <div class="wow stat-item">
           <h2>95%</h2>
           <p>Клиентов рекомендуют нас</p>
         </div>
-        <div class="stat-item">
+        <div class="stat-item hidden">
           <h2></h2>
           <p></p>
         </div>
       </div>
       <div class="divider"></div>
-      <div class="statistics-row wow animate__animated animate__fadeInRight">
-        <div class="stat-item">
+      <div class="statistics-row">
+        <div class="wow stat-item">
           <h2>12,500</h2>
           <p>Кв м² спроектированных интерьеров</p>
         </div>
-        <div class="stat-item">
+        <div class="wow stat-item">
           <h2>1 цель</h2>
           <p>Создать идеальное пространство</p>
         </div>
-        <div class="stat-item">
+        <div class="wow stat-item">
           <h2>100%</h2>
           <p>Соблюдение сроков</p>
         </div>
@@ -87,26 +100,29 @@
     <div class="circle-r">
       <span>R</span>
     </div>
-  </section>
+  </section> -->
+  <HomeStatsComponent />
   <section class="services">
     <HomeGallery />
   </section>
   <section class="projects">
     <div class="projects-container">
-      <h3 class="wow animate__animated animate__fadeInLeft">Наши проекты</h3>
+      <h3><span class="wow reveal-sb">Наши проекты</span></h3>
       <ProjectsSwiperComponent />
     </div>
   </section>
   <section class="reviews">
-    <h2 class="wow animate__animated animate__fadeInRight">
-      Отзывы наших<br />
-      клиентов
+    <h2>
+      <span class="wow reveal-sb"
+        >Отзывы наших<br />
+        клиентов</span
+      >
     </h2>
     <div class="divider"></div>
     <ReviewsSliderComponent />
   </section>
   <section class="offer">
-    <h2 class="wow animate__animated animate__fadeIn">
+    <h2>
       Готовы создать<span class="arrow"
         ><img src="@/assets/images/home/offer-arrow.svg" alt="" /></span
       ><br />
@@ -122,8 +138,8 @@
   </section>
   <section class="process">
     <div class="container">
-      <h2 class="wow animate__animated animate__fadeInLeft">
-        Наш процесс работы
+      <h2>
+        <span class="wow reveal-sb">Наш процесс работы</span>
       </h2>
       <div class="process-grid">
         <div class="process-item wow animate__animated animate__fadeInRight">
@@ -186,11 +202,11 @@
     </div>
   </section>
   <section class="faq">
-    <h2 class="wow animate__animated animate__fadeInLeft">FAQ</h2>
+    <h2><span class="wow reveal-sb">FAQ</span></h2>
     <FaqComponent />
   </section>
   <section class="news">
-    <h2 class="wow animate__animated animate__fadeInDown">Последние новости</h2>
+    <h2><span class="wow reveal-sb">Последние новости</span></h2>
     <NewsSwiperComponent />
   </section>
 </template>
@@ -203,6 +219,14 @@ import ValuesArrowsComponent from "@/components/Tools/ValuesArrowsComponent.vue"
 import ReviewsSliderComponent from "@/components/Swipers/ReviewsSliderComponent.vue";
 import FaqComponent from "@/components/Tools/FaqComponent.vue";
 import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
+import { ref } from "vue";
+import HomeStatsComponent from "@/components/Blocks/HomeStatsComponent.vue";
+
+const isOpen = ref(false);
+
+const toggleIsOpen = () => {
+  isOpen.value = !isOpen.value;
+};
 </script>
 
 <style lang="sass" scoped>
@@ -219,11 +243,24 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
     flex-direction: column
     text-align: center
     padding-bottom: 100px
+    @media (max-width: 1200px)
+      padding: 0 70px
+    @media (max-width: 992px)
+      padding: 0 30px
+    @media (max-width: 768px)
+      padding: 0 20px
     .content
       display: flex
       justify-content: center
       h1
-        max-width: 1200px
+        display: inline
+        padding: 0 5%
+        @media (max-width: 1000px)
+          font-size: 5.7rem
+        @media (max-width: 490px)
+          font-size: 4rem
+          padding: 0 3%
+
   .social-links
     position: absolute
     right: 5%
@@ -231,30 +268,55 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
 
 //--------------------------------
 .expert-design
-  height: 150vh
+  margin-top: 15rem
   display: flex
   justify-content: center
   align-items: center
+  margin-bottom: 15rem
   .image-wrapper-mob
     display: none
   .container
-    align-items: center
-    justify-content: space-between
+    display: grid
+    grid-template-columns: 6fr 1fr 5fr
+    @media (max-width: 1200px)
+      padding: 0 70px
+      grid-template-columns: 5.5fr 0.5fr 6fr
+    @media (max-width: 992px)
+      padding: 0 30px
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
+      padding: 0 20px
     .image-wrapper
-      flex: 1
-      margin-right: 50px
       border-radius: 10px
+      @media (max-width: 768px)
+        padding: 0 50px
       img
-        width: 100%
+        max-width: 100%
         height: auto
         border-radius: 10px
 
     .text-content
-      flex: 1
-      max-width: 705px
+      align-self: flex-end
+      padding-bottom: 1rem
+      padding-top: 2rem
+      @media (max-width: 768px)
+        order: -1
+      .read-more-text
+        max-height: 0
+        overflow: hidden
+        transition-duration: 0.3s
+        &.open
+          transition-duration: 0.3s
+          max-height: 500px
       h3
         margin-bottom: 5vw
-        color: $font-grey
+        @media (max-width: 1650px)
+          font-size: 3.5rem
+        @media (max-width: 1110px)
+          font-size: 3rem
+          margin-bottom: 2rem
+        @media (max-width: 900px)
+          font-size: 2.5rem
       p
         color: $font-grey
       .read-more
@@ -264,6 +326,7 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
         font-size: 1.25rem
         transition: color 0.3s ease
         margin-top: auto
+        cursor: pointer
         &:hover
           color: #0056b3
           cursor: pointer
@@ -272,7 +335,7 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
 
 .values
   background-color: $bgc-second
-  padding-bottom: 181px
+  padding-bottom: 10rem
   .container
     flex-direction: column
     padding-right: 0
@@ -283,8 +346,6 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
       .title-block
         padding-top: 9%
         transform: translateX(40px)
-        h2
-          color: $font-black
       img
         max-width: 100%
         @media (max-width: 576px)
@@ -317,15 +378,17 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
       align-items: center
       gap: 1rem
       margin-bottom: 0
+    .hidden
+      visibility: hidden
   .stat-item
     display: flex
     flex-direction: column
     align-items: left
     flex: 1
+    padding-right: 10px
     @media (max-width: 992px)
       align-items: center
     h2
-      color: $font-black
     p
       margin-top: 0.5rem
       margin-bottom: 0
@@ -365,7 +428,6 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
   h3
     padding-left: 100px
     padding-bottom: 70px
-    color: $font-black
     @media (max-width: 992px)
       padding-left: 50px
       padding-bottom: 20px
@@ -530,28 +592,6 @@ import NewsSwiperComponent from "@/components/Swipers/NewsSwiperComponent.vue";
     margin-bottom: 5rem
 
 // -------- Medias ------------
-@media (max-width: 992px)
-  .expert-design
-    background: url("@/assets/images/home/2darken.jpg") no-repeat center center
-    .image-wrapper-mob
-      display: block
-      position: absolute
-      margin: 0 auto
-      width: 70%
-      border-radius: 0
-      img
-        border-radius: 0
-    .image-wrapper
-      display: none
-    .container .text-content
-      padding: 0 40px
-      z-index: 10
-      h3, p
-        color: white
-        text-shadow: 0px 0px 10px black
-      .read-more
-        color: white
-
 @media (max-width: 768px)
   .home .container .social-links
     display: none

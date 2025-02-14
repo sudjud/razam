@@ -1,13 +1,9 @@
 <template>
   <main class="main">
     <h1>
-      <span class="wow animate__animated animate__fadeInLeft"
-        >Создаём стильное
-      </span>
+      <span class="wow reveal-sb">Создаём стильное </span>
       <div class="devider">/</div>
-      <div class="space wow animate__animated animate__fadeInRightBig">
-        пространство для вас
-      </div>
+      <div class="space wow reveal-sw">пространство для вас</div>
     </h1>
     <h4>О нас</h4>
     <div class="main-image">
@@ -271,7 +267,6 @@ main
       display: inline
       margin: 0
     div.space
-      color: $font-white
       text-align: center
       padding-left: 5%
   h4

@@ -81,13 +81,18 @@
       display: flex
       justify-content: center
       align-items: center
-      width: 60px
-      height: 60px
+      width: 3.75rem
+      height: 3.75rem
       border: 1px solid $font-grey
       border-radius: 50%
       font-size: 38px
       font-weight: 100
       color: $font-grey
+      @media (max-width: 768px)
+        width: 3.75rem
+        height: 3.75rem
+      img
+        width: 1.2rem
       p
         font-size: 32px
         font-weight: 400
@@ -97,11 +102,7 @@
   .values-list
     margin-top: 90px
     .value-item .circle
-        width: 50px
-        height: 50px
         img
-          width: 15px
-        p
 
 @media (max-width: 1200px)
   .values-list
@@ -126,11 +127,4 @@
       margin-top: 10px
     .value-item
       min-width: 97px
-      .circle
-        width: 30px
-        height: 30px
-        img
-          width: 10px
-      p
-        font-size: 12px
 </style>

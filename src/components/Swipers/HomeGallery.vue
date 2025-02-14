@@ -17,7 +17,7 @@
         >
         <span class="top-last">{{ padNumber(items.length) }}</span>
       </span>
-      <h2 class="wow animate__animated animate__fadeInLeft">Наши услуги</h2>
+      <h2><span class="wow reveal-sb">Наши услуги</span></h2>
     </div>
     <div class="display">
       <div class="buttons">
@@ -26,15 +26,16 @@
           :key="index"
           class="button"
           :class="{ active: index === currentIndex }"
-          @click="changeImage(index)"
+          @mouseover="changeImage(index)"
+          @click="moveToServices"
         >
           <div class="button-wrapper">
             <div>{{ item.service }}</div>
             <div class="buttons-idx">{{ padNumber(index + 1) }}</div>
             <div v-if="index === currentIndex" class="arrow-wrapper">
-              <!-- <div class="arrow">
+              <div class="arrow">
                 <img src="@/assets/images/home/diag-arrow2.png" alt="arrow" />
-              </div> -->
+              </div>
             </div>
           </div>
           <div class="divider"></div>
@@ -48,7 +49,7 @@
     </div>
   </div>
   <div class="gallery-sm">
-    <h2 class="wow animate__animated animate__fadeInLeft">Наши услуги</h2>
+    <h2><span class="wow reveal-sb">Наши услуги</span></h2>
     <div class="slider-gallery">
       <Swiper
         :slides-per-view="1.05"
@@ -73,16 +74,18 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/swiper-bundle.css";
+import router from "@/router";
 import photo1 from "@/assets/images/home/4.jpg";
+import photo2 from "@/assets/images/home/3.jpg";
 
 import SwiperCore from "swiper";
 SwiperCore.use([Navigation, Pagination]);
 
 const items = [
   { image: photo1, service: "Дизайн интерьера" },
-  { image: photo1, service: "Дизайн домов и квартир" },
+  { image: photo2, service: "Дизайн домов и квартир" },
   { image: photo1, service: "Дизайн коммерческих помещений" },
-  { image: photo1, service: "Ремонт домов и квартир" },
+  { image: photo2, service: "Ремонт домов и квартир" },
   { image: photo1, service: "Ремонт коммерческих помещений" },
 ];
 
@@ -90,6 +93,10 @@ const currentIndex = ref<number>(0);
 
 const changeImage = (index: number): void => {
   currentIndex.value = index;
+};
+
+const moveToServices = () => {
+  router.push("/services");
 };
 
 const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
@@ -150,7 +157,6 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
     align-items: center
     justify-content: space-between
     h2
-      color: $font-black
       padding-right: 3rem
       padding-bottom: 3.9rem
       font-size: 5rem
@@ -186,6 +192,7 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
       .button
         display: flex
         flex-direction: column
+        min-width: 120%
         font-size: 2rem
         cursor: pointer
         transition: color 0.3s ease
@@ -197,7 +204,6 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
           text-align: left
           margin: 2.3rem 0
         .divider
-          width: 120%
           height: 1px
           background-color: black
 
@@ -209,13 +215,17 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
 
       .arrow-wrapper
         margin-left: auto
+        position: relative
 
       .arrow
         display: flex
+        position: absolute
         justify-content: center
         align-items: center
         width: 3rem
         height: 3rem
+        right: 1rem
+        top: -1.5rem
         border-radius: 50%
         border: 1px solid $font-black
 

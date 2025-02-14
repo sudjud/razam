@@ -10,12 +10,12 @@ html
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   font-size: 100%
-  @media (max-width: 1400px)
-    font-size: 90%
-  @media (max-width: 1200px)
+  @media (max-width: 1500px)
     font-size: 80%
-  @media (max-width: 768px)
+  @media (max-width: 1250px)
     font-size: 70%
+  @media (max-width: 768px)
+    font-size: 60%
   @media (max-width: 576px)
     font-size: 50%
 
@@ -52,7 +52,6 @@ h1, h2, h3, h4, h5
   font-weight: 500
   font-family: 'Inter', sans-serif
   line-height: 1.2
-  color: $font-white
 
 h1
   font-size: 7.5rem
@@ -64,3 +63,35 @@ h4
   font-size: 2rem
 h5
   font-size: 2.5rem
+
+// черный шрифт, бежевый фон
+.reveal-sb
+  background: linear-gradient($bgc-second 0 0) no-repeat, linear-gradient($font-black 0 0) no-repeat
+  +reveal
+
+// черный шрифт, серый фон
+.reveal-mb
+  background: linear-gradient($bgc-main 0 0) no-repeat, linear-gradient($font-black 0 0) no-repeat
+  +reveal
+
+// Серый шрифт, бежевый фон 
+.reveal-sg
+  background: linear-gradient($bgc-second 0 0) no-repeat, linear-gradient($font-grey 0 0) no-repeat
+  +reveal
+
+// белый шрифт, бежевый фон
+.reveal-sw
+  background: linear-gradient($bgc-second 0 0) no-repeat, linear-gradient($font-white 0 0) no-repeat
+  +reveal
+
+.reveal-bb
+  background: linear-gradient($font-black 0 0) no-repeat, linear-gradient($font-black 0 0) no-repeat
+  +reveal
+
+@keyframes t
+  to 
+    background-size: 151% 100% // we animate to 150% instead of 100%
+
+@keyframes b
+  to 
+    background-position: -200% 0, 0 0 // we update the position of only the first layer

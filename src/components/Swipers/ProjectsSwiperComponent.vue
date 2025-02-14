@@ -96,11 +96,35 @@ export default defineComponent({
 
     const breakpoints = ref({
       300: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.3,
+        spaceBetween: 15,
+      },
+      576: {
+        slidesPerView: 1.7,
+        spaceBetween: 15,
+      },
+      992: {
+        slidesPerView: 1.8,
+        spaceBetween: 15,
+      },
+      1080: {
+        slidesPerView: 2.1,
+        spaceBetween: 15,
+      },
+      1400: {
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+      },
+      1501: {
+        slidesPerView: 2.1,
+        spaceBetween: 15,
+      },
+      1760: {
+        slidesPerView: 2.5,
         spaceBetween: 15,
       },
       1920: {
-        slidesPerView: 2.5,
+        slidesPerView: 2.7,
         spaceBetween: 15,
       },
     });
@@ -130,7 +154,6 @@ export default defineComponent({
       padding-left: 0px
       display: block
   h2
-    font-size: 36px
     font-weight: bold
     margin-bottom: 20px
     color: black
@@ -185,6 +208,7 @@ export default defineComponent({
   text-align: left
 
 .slide-content
+  width: 35rem
   img
     width: 100%
     border-radius: 8px

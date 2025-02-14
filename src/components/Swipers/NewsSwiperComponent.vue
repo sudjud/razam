@@ -93,31 +93,31 @@ const news = [
 const breakpoints = ref({
   300: {
     slidesPerView: 1.1,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   576: {
     slidesPerView: 1.1,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   768: {
     slidesPerView: 1.4,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   992: {
     slidesPerView: 1.7,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   1200: {
     slidesPerView: 2.1,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   1400: {
     slidesPerView: 2.5,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   1700: {
     slidesPerView: 2.9,
-    spaceBetween: 0,
+    spaceBetween: 15,
   },
   1920: {
     slidesPerView: 3.3,
