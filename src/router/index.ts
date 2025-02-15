@@ -4,6 +4,8 @@ import AboutView from "@/views/AboutView.vue";
 import ServicesView from "@/views/ServicesView.vue";
 import PortfolioView from "@/views/PortfolioView.vue";
 import ProjectView from "@/views/ProjectView.vue";
+import ContactView from "@/views/ContactView.vue";
+import BlogView from "@/views/BlogView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -31,6 +33,16 @@ const routes: Array<RouteRecordRaw> = [
     name: "project",
     component: ProjectView,
     props: true,
+  },
+  {
+    path: "/contact",
+    name: "Contact us",
+    component: ContactView,
+  },
+  {
+    path: "/news",
+    name: "Blog",
+    component: BlogView,
   },
 ];
 
