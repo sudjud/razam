@@ -6,6 +6,7 @@ import PortfolioView from "@/views/PortfolioView.vue";
 import ProjectView from "@/views/ProjectView.vue";
 import ContactView from "@/views/ContactView.vue";
 import BlogView from "@/views/BlogView.vue";
+import ArticleView from "@/views/ArticleView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -43,6 +44,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/news",
     name: "Blog",
     component: BlogView,
+  },
+  {
+    path: "/news/:slug",
+    name: "Article",
+    component: ArticleView,
+    props: true,
   },
 ];
 

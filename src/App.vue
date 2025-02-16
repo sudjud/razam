@@ -21,26 +21,33 @@ import WOW from "wow.js";
 
 import HeaderComponent from "@/components/Header/HeaderComponent.vue";
 import HeaderSmComponent from "@/components/Header/HeaderSmComponent.vue";
-import FooterComponent from "./components/Footer/FooterComponent.vue";
+import FooterComponent from "@/components/Footer/FooterComponent.vue";
 
 const getInitialHeaderComponent = () => {
   return window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
 };
 
 const currentHeaderComponent = ref(getInitialHeaderComponent());
-
 const updateHeaderComponent = () => {
   currentHeaderComponent.value =
     window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
 };
 
 const route = useRoute();
-const isLoading = ref(false); // Флаг для прелоадера
-const showPage = ref(true);
+const isLoading = ref(true);
+const showPage = ref(false);
 let wowInstance = null;
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener("resize", updateHeaderComponent);
+
+  await preloadImages(); // Ожидаем загрузки всех изображений
+  await nextTick(); // Ждём, пока Vue отрендерит DOM
+
+  requestAnimationFrame(() => {
+    isLoading.value = false; // Прелоадер исчезает только после полной загрузки
+    showPage.value = true;
+  });
 
   setTimeout(() => {
     wowInstance = new WOW({ live: false });
@@ -53,9 +60,14 @@ watch(route, async () => {
   showPage.value = false;
   await nextTick();
 
-  setTimeout(() => {
-    isLoading.value = false;
-    showPage.value = true;
+  setTimeout(async () => {
+    await preloadImages();
+    await nextTick();
+
+    requestAnimationFrame(() => {
+      isLoading.value = false;
+      showPage.value = true;
+    });
 
     setTimeout(() => {
       if (wowInstance) {
@@ -68,6 +80,23 @@ watch(route, async () => {
     }, 100);
   }, 800);
 });
+
+// Функция для загрузки всех изображений на странице
+const preloadImages = () => {
+  const images = document.querySelectorAll("img");
+  const promises = Array.from(images).map(
+    (img) =>
+      new Promise((resolve) => {
+        if (img.complete) {
+          resolve();
+        } else {
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+        }
+      })
+  );
+  return Promise.all(promises);
+};
 </script>
 
 <style lang="sass">
@@ -83,6 +112,7 @@ watch(route, async () => {
   align-items: center
   justify-content: center
   z-index: 9999
+  transition: opacity 0.5s ease-in-out
 
 /* Спиннер */
 .spinner

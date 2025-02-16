@@ -12,6 +12,7 @@ export const blog = [
     name: "Как освещение меняет атмосферу интерьера",
     by: "Razam",
     date: "01.05.2023",
+    slug: "lights",
   },
   {
     previewImg: ideasPreview,
@@ -19,6 +20,7 @@ export const blog = [
     name: "Идеи для стильного ремонта",
     by: "Razam",
     date: "01.05.2023",
+    slug: "ideas",
   },
   {
     previewImg: trendsPreview,
@@ -26,6 +28,7 @@ export const blog = [
     name: "Тренды в дизайне: что актуально",
     by: "Razam",
     date: "01.05.2023",
+    slug: "trends",
   },
   {
     previewImg: materialsPreview,
@@ -33,6 +36,7 @@ export const blog = [
     name: "Современные материалы в дизайне интерьера",
     by: "Razam",
     date: "01.05.2023",
+    slug: "materials",
   },
   {
     previewImg: bedroomPreview,
@@ -40,6 +44,7 @@ export const blog = [
     name: "Уютная спальня: секреты идеального дизайна",
     by: "Razam",
     date: "01.05.2023",
+    slug: "bedroom",
   },
   {
     previewImg: minimalismPreview,
@@ -47,5 +52,14 @@ export const blog = [
     name: "Минимализм в дизайне: ключ к гармонии",
     by: "Razam",
     date: "01.05.2023",
+    slug: "minimalism",
+  },
+  {
+    previewImg: minimalismPreview,
+    category: "Интерьер дизайн",
+    name: "Минимализм в дизайне: ключ к гармонии",
+    by: "Razam",
+    date: "01.05.2023",
+    slug: "minimalism",
   },
 ];
