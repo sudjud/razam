@@ -90,6 +90,8 @@ export default defineComponent({
   padding: 0 6.25rem
   justify-content: center
   align-items: center
+  @media (max-width: 576px)
+    padding: 0 20px
   &-slider
     width: 100%
     .swiper-slide

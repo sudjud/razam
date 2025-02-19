@@ -110,14 +110,16 @@ const padNumber = (num: number): string => (num < 10 ? `0${num}` : `${num}`);
     color: black
     padding-left: 50px
     padding-bottom: 30px
-    @media (max-width: 428px)
-      padding-left: 30px
+    @media (max-width: 576px)
+      padding-left: 20px
   .slider-gallery
     width: 100%
     display: flex
     justify-content: center
     align-items: center
     margin-bottom: 12.8rem
+    @media (max-width: 576px)
+      margin-bottom: 40px
     .my-swiper
       width: 100%
       max-width: 800px

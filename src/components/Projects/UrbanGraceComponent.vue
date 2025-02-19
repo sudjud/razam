@@ -1,10 +1,10 @@
 <template>
   <section class="lounge">
     <h5>U / G</h5>
-    <h2 class="wow animate__animated animate__fadeInRight">Гостиная комната</h2>
+    <h2><span class="wow reveal-bb">Гостиная комната</span></h2>
     <div class="content-wrapper">
       <div class="text-wrapper">
-        <h2 class="wow animate__animated animate__fadeInLeft">
+        <h2>
           <span>сочетание уюта, стиля и современности</span>
         </h2>
         <p>
@@ -14,7 +14,7 @@
           конструкция позволяет легко адаптироваться под любые потребности.
         </p>
       </div>
-      <div class="lounge-image wow animate__animated animate__fadeInRight">
+      <div class="lounge-image">
         <img
           src="@/assets/images/projects/urban-grace/lounge.jpg"
           alt="urban-grace"
@@ -26,9 +26,7 @@
     <h4>Urban grace</h4>
     <div class="content-wrapper">
       <div class="text-wrapper">
-        <h2 class="wow animate__animated animate__fadeInLeft">
-          Спальня, где <span>начинается гармония дня</span>
-        </h2>
+        <h2>Спальня, где <span>начинается гармония дня</span></h2>
         <p>
           Спальня выполнена в спокойных зелёных и нейтральных тонах, создавая
           атмосферу уюта и релаксации. Детали, такие как мягкое изголовье
@@ -37,7 +35,7 @@
           гармоничное начало дня.
         </p>
       </div>
-      <div class="image wow animate__animated animate__fadeInRight">
+      <div class="image">
         <img src="@/assets/images/projects/urban-grace/bedroom.jpg" alt="" />
       </div>
     </div>
@@ -45,21 +43,11 @@
   <section class="lights">
     <div class="content-wrapper">
       <div class="images">
-        <img
-          class="wow animate__animated animate__fadeInRight"
-          src="@/assets/images/projects/urban-grace/lights1.jpg"
-          alt=""
-        />
-        <img
-          class="wow animate__animated animate__fadeInLeft"
-          src="@/assets/images/projects/urban-grace/lights2.jpg"
-          alt=""
-        />
+        <img src="@/assets/images/projects/urban-grace/lights1.jpg" alt="" />
+        <img src="@/assets/images/projects/urban-grace/lights2.jpg" alt="" />
       </div>
       <div class="text-wrapper">
-        <h2 class="wow animate__animated animate__fadeInRight">
-          Свет,<br /><span>который задает настроение</span>
-        </h2>
+        <h2>Свет,<br /><span>который задает настроение</span></h2>
         <p>
           Интерьер освещён разнообразными источниками света, которые
           подчёркивают его детали. Настенные светильники с мягким свечением
@@ -134,6 +122,8 @@ h2
 
 .bedroom
   margin-top: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   h4
     color: $font-grey
     font-size: 2rem
@@ -167,6 +157,8 @@ h2
     margin-top: 5rem
   @media (max-width: 768px)
     margin-top: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   .content-wrapper
     grid-template-columns: 6fr 6fr
     @media (max-width: 768px)

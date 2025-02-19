@@ -76,7 +76,7 @@
               >{{ $t("menu.contact") }}</router-link
             >
           </li>
-          <li class="lang-switch">
+          <li @click.stop class="lang-switch">
             <LangSwitchComponent />
           </li>
           <li>

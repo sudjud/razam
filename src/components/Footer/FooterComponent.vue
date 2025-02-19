@@ -65,9 +65,6 @@
               >{{ $t("menu.contact") }}</router-link
             >
           </li>
-          <li>
-            <LangSwitchComponent />
-          </li>
         </ul>
         <ul>
           <li>Документы</li>

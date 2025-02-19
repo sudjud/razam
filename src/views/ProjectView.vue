@@ -4,10 +4,7 @@
       Главная / Портфолио / <span>{{ project.name }}</span>
     </div>
     <section class="cover">
-      <div
-        class="numbers wow animate__animated animate__fadeInLeft"
-        :style="`--bg-url: url(${project.preview})`"
-      >
+      <div class="numbers" :style="`--bg-url: url(${project.preview})`">
         <div class="label">
           <div>
             <p>Общая площадь</p>
@@ -29,8 +26,8 @@
       </div>
       <div class="info">
         <!-- <div class="info-left"> -->
-        <h1 class="name wow animate__animated animate__fadeInRight">
-          {{ project.name }}
+        <h1 class="name">
+          <span class="wow reveal-bb">{{ project.name }}</span>
         </h1>
         <p class="type">{{ project.type }}</p>
         <div class="customer">
@@ -49,15 +46,11 @@
     </section>
   </main>
   <section class="photos">
-    <div
-      v-for="(item, index) in smallImages"
-      :key="index"
-      class="photo wow animate__animated animate__fadeInLeft"
-    >
+    <div v-for="(item, index) in smallImages" :key="index" class="photo">
       <img :src="item.photo" alt="" />
       <p>{{ item.name }}</p>
     </div>
-    <div class="photo-main wow animate__animated animate__fadeInRight">
+    <div class="photo-main">
       <img :src="mainImage.photo" alt="" />
       <p>{{ mainImage.name }}</p>
     </div>
@@ -68,10 +61,7 @@
   <section class="offer">
     <h2>
       Готовы создать<span class="arrow"
-        ><img
-          class="wow animate__animated animate__fadeInBottomLeft"
-          src="@/assets/images/home/offer-arrow.svg"
-          alt="" /></span
+        ><img src="@/assets/images/home/offer-arrow.svg" alt="" /></span
       ><br />
       <div class="decor">
         ваш идеальный<br />
@@ -111,14 +101,6 @@ const currentProjectComponent = computed(
   () => projectComponents[project.value.slug] || null
 );
 
-// const componentName = computed(() => {
-//   const firstWord = project.value.slug.split("-")[0];
-//   const secondWord = project.value.slug.split("-")[1];
-//   firstWord[0] = firstWord[0].toUpperCase();
-//   secondWord[0] = secondWord[0].toUpperCase();
-//   return `${firstWord}${secondWord}Component.vue`;
-// });
-
 onMounted(() => {
   if (!project.value) {
     console.error("Проект не найден");
@@ -154,6 +136,8 @@ onMounted(() => {
         align-self: flex-end
         border-radius: 0 12px 12px 0
         margin-bottom: 60px
+        @media (max-width: 576px)
+          width: 18rem
         p
           margin: 0
           margin-top: 12px
@@ -213,6 +197,8 @@ onMounted(() => {
     grid-template-areas:". ."". .""main main""main main"
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr 1fr 1fr 1fr
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   p
     margin: 0
     color: $font-grey
@@ -231,6 +217,8 @@ onMounted(() => {
 .single
   +regpad
   margin-top: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
 
 // ----------------------- offer ----------------------
 
@@ -249,6 +237,7 @@ onMounted(() => {
     max-width: calc(100% - 100px)
   @media (max-width: 576px)
     max-width: calc(100% - 40px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     line-height: 7.5rem

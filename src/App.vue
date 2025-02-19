@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, nextTick } from "vue";
+import { ref, onMounted, watch, nextTick, onUnmounted, shallowRef } from "vue";
 import { useRoute } from "vue-router";
 import WOW from "wow.js";
 
@@ -27,7 +27,7 @@ const getInitialHeaderComponent = () => {
   return window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
 };
 
-const currentHeaderComponent = ref(getInitialHeaderComponent());
+const currentHeaderComponent = shallowRef(getInitialHeaderComponent());
 const updateHeaderComponent = () => {
   currentHeaderComponent.value =
     window.innerWidth <= 768 ? HeaderSmComponent : HeaderComponent;
@@ -37,6 +37,40 @@ const route = useRoute();
 const isLoading = ref(true);
 const showPage = ref(false);
 let wowInstance = null;
+
+let scrollY = 0;
+let speed = 0; // Скорость прокрутки
+let isScrolling = false;
+
+const easeScroll = () => {
+  isScrolling = true;
+  speed *= 0.95;
+  scrollY += speed;
+  window.scrollTo(0, scrollY);
+
+  if (Math.abs(speed) > 0.1) {
+    requestAnimationFrame(easeScroll);
+  } else {
+    isScrolling = false;
+  }
+};
+
+const handleWheel = (event) => {
+  event.preventDefault();
+  speed += event.deltaY * 0.05;
+
+  if (!isScrolling) {
+    easeScroll();
+  }
+};
+
+onMounted(() => {
+  document.addEventListener("wheel", handleWheel, { passive: false });
+});
+
+onUnmounted(() => {
+  document.removeEventListener("wheel", handleWheel);
+});
 
 onMounted(async () => {
   window.addEventListener("resize", updateHeaderComponent);
@@ -58,6 +92,10 @@ onMounted(async () => {
 watch(route, async () => {
   isLoading.value = true;
   showPage.value = false;
+
+  speed = 0;
+  scrollY = 0;
+
   await nextTick();
 
   setTimeout(async () => {

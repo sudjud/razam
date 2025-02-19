@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" :class="{ hidden: isHidden }">
     <div class="container">
       <div class="logo">
         <router-link to="/">
@@ -60,7 +60,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, onMounted, onUnmounted } from "vue";
 import { useRoute } from "vue-router";
 import LangSwitchComponent from "@/components/Tools/LangSwitchComponent.vue";
 
@@ -75,7 +75,32 @@ export default defineComponent({
     // Метод для определения активной ссылки
     const isActive = (path: string): boolean => route.path === path;
 
-    return { isActive };
+    const lastScrollY = ref(0);
+    const isHidden = ref(false);
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.value && currentScrollY > 50) {
+        // Скроллим вниз — скрываем хедер
+        isHidden.value = true;
+      } else {
+        // Скроллим вверх — показываем хедер
+        isHidden.value = false;
+      }
+
+      lastScrollY.value = currentScrollY;
+    };
+
+    onMounted(() => {
+      window.addEventListener("scroll", handleScroll);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("scroll", handleScroll);
+    });
+
+    return { isActive, isHidden };
   },
 });
 </script>
@@ -83,11 +108,16 @@ export default defineComponent({
 <style lang="sass" scoped>
 .header
   position: fixed
+  top: 0
+  left: 0
   width: 100%
   display: flex
   align-items: center
-  background-color: transparent
+  background-color: rgba(white, 0.5)
   z-index: 100
+  transition: transform 0.4s ease-in-out
+  &.hidden
+    transform: translateY(-100%)
 
   .container
     display: flex
@@ -99,7 +129,7 @@ export default defineComponent({
 
   .logo
     img
-      height: 100px
+      height: 90px
       padding: 10px 0
       display: block
 
@@ -107,6 +137,7 @@ export default defineComponent({
     ul
       display: flex
       font-family: $font-header
+      align-items: center
       font-weight: 600
       gap: 20px
       list-style: none
@@ -116,7 +147,7 @@ export default defineComponent({
       li
         a
           text-decoration: none
-          font-size: 16px
+          font-size: 1rem
           color: $font-grey
           transition: color 0.3s ease
 
@@ -126,7 +157,7 @@ export default defineComponent({
           &.active
             color: $font-black
       .divider
-        font-size: 16px
+        font-size: 1.5rem
         color: $font-grey
         margin: 0 12px
 

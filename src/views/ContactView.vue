@@ -172,6 +172,9 @@ section.info
   grid-template-columns: 6fr 1fr 5fr
   @media (max-width: 768px)
     grid-template-columns: 5fr 0.5fr 6.5fr
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
+    margin-bottom: $mob-col-gap
   .image-wrapper img
     max-width: 100%
   .content

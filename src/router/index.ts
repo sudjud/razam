@@ -33,7 +33,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/portfolio/:slug",
     name: "project",
     component: ProjectView,
-    props: true,
   },
   {
     path: "/contact",
@@ -49,7 +48,6 @@ const routes: Array<RouteRecordRaw> = [
     path: "/news/:slug",
     name: "Article",
     component: ArticleView,
-    props: true,
   },
 ];
 

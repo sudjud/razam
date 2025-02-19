@@ -13,10 +13,19 @@ export const blog = [
     by: "Razam",
     date: "01.05.2023",
     slug: "lights",
+    tags: [
+      "Освещение в интерьере",
+      "Световой дизайн",
+      "Атмосфера дома",
+      "Зонирование светом",
+      "Типы освещения",
+      "Идеи для освещения",
+      "Тренды освещения",
+    ],
   },
   {
     previewImg: ideasPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Идеи для стильного ремонта",
     by: "Razam",
     date: "01.05.2023",
@@ -24,7 +33,7 @@ export const blog = [
   },
   {
     previewImg: trendsPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Тренды в дизайне: что актуально",
     by: "Razam",
     date: "01.05.2023",
@@ -32,7 +41,7 @@ export const blog = [
   },
   {
     previewImg: materialsPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Современные материалы в дизайне интерьера",
     by: "Razam",
     date: "01.05.2023",
@@ -40,7 +49,7 @@ export const blog = [
   },
   {
     previewImg: bedroomPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Уютная спальня: секреты идеального дизайна",
     by: "Razam",
     date: "01.05.2023",
@@ -48,7 +57,7 @@ export const blog = [
   },
   {
     previewImg: minimalismPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Минимализм в дизайне: ключ к гармонии",
     by: "Razam",
     date: "01.05.2023",
@@ -56,7 +65,7 @@ export const blog = [
   },
   {
     previewImg: minimalismPreview,
-    category: "Интерьер дизайн",
+    category: "Дизайн интерьера",
     name: "Минимализм в дизайне: ключ к гармонии",
     by: "Razam",
     date: "01.05.2023",

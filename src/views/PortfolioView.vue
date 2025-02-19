@@ -272,6 +272,8 @@ import TabsPortfolioComponent from "@/components/Blocks/TabsPortfolioComponent.v
 .portfolio
   margin-top: 10rem
   +regpad
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     text-align: right
@@ -284,6 +286,8 @@ import TabsPortfolioComponent from "@/components/Blocks/TabsPortfolioComponent.v
   display: flex
   flex-direction: column
   margin-top: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     margin-bottom: 5rem
@@ -365,6 +369,7 @@ import TabsPortfolioComponent from "@/components/Blocks/TabsPortfolioComponent.v
     max-width: calc(100% - 100px)
   @media (max-width: 576px)
     max-width: calc(100% - 40px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     line-height: 7.5rem

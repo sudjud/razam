@@ -207,6 +207,8 @@ const toggleIsOpen = () => {
 
 .services
   margin-top: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
 
 // ----------------- process -------------------------
 
@@ -297,6 +299,8 @@ const toggleIsOpen = () => {
   @media (max-width: 576px)
     max-width: calc(100% - 40px)
     padding: 6.75rem 2rem 5.1rem 2rem
+    margin-top: $mob-col-gap
+    margin-bottom: $mob-col-gap
   h2
     color: $font-black
     line-height: 7.5rem

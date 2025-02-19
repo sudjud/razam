@@ -280,6 +280,8 @@ main
 .design
   +regpad
   margin-top: 20rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     text-align: left
@@ -301,6 +303,8 @@ main
       grid-template-columns: 2.9fr 0.1fr 3fr 6fr
     @media (max-width: 768px)
       grid-template-columns: 1fr
+    @media (max-width: 768px)
+      padding-top: 20px
     p
       color: $font-grey
     .image2
@@ -316,6 +320,7 @@ section.why
   gap: 40px
   @media (max-width: 576px)
     grid-template-columns: 1fr
+    margin-top: $mob-col-gap
   h2
     color: $font-black
     @media (max-width: 992px)
@@ -327,6 +332,8 @@ section.rates
   display: flex
   flex-direction: column
   margin-top: 20rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   .rates-item
     +regpad
     width: 100%
@@ -363,6 +370,8 @@ section.rates
 .way
   +regpad
   margin-top: 20rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   h2
     color: $font-black
   .way-grid
@@ -402,6 +411,8 @@ section.rates
   display: flex
   flex-direction: column
   margin-top: 20rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   .team-top
     display: grid
     grid-template-columns: 1fr 1fr 0.5fr 1.5fr
@@ -464,6 +475,7 @@ section.rates
     grid-template-columns: 5fr 4fr 3fr
   @media (max-width: 576px)
     grid-template-columns: 9fr 3fr
+    margin-top: $mob-col-gap
   p
     padding-right: 5rem
     @media (max-width: 576px)

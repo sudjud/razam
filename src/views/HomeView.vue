@@ -261,6 +261,9 @@ const toggleIsOpen = () => {
   justify-content: center
   align-items: center
   margin-bottom: 15rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
+    margin-bottom: $mob-col-gap
   .image-wrapper-mob
     display: none
   .container
@@ -351,6 +354,8 @@ const toggleIsOpen = () => {
   text-align: center
   position: relative
   padding: 22rem 0
+  @media (max-width: 576px)
+    padding: $mob-col-gap 0
   .container
     flex-direction: column
     justify-content: center
@@ -419,11 +424,15 @@ const toggleIsOpen = () => {
     @media (max-width: 992px)
       padding-left: 50px
       padding-bottom: 20px
+    @media (max-width: 576px)
+      padding-left: 20px
 
 // -----------------------------------------------
 
 .reviews
   margin-bottom: 22rem
+  @media (max-width: 576px)
+    margin-bottom: $mob-col-gap
   h2
     padding-top: 21rem
     color: black
@@ -431,11 +440,15 @@ const toggleIsOpen = () => {
     padding-right: 5rem
     @media (max-width: 576px)
       font-size: 5rem
+      padding-right: 20px
+      padding-top: $mob-col-gap
   .divider
     width: calc( 100% - 12.5rem )
     height: 1px
     background-color: $font-grey
     margin: 8.75rem 6.25rem 4.5rem 6.25rem
+    @media (max-width: 576px)
+      margin-top: 20px
 
 // -------------------------------------
 
@@ -484,12 +497,14 @@ const toggleIsOpen = () => {
 
 .process
   margin-top: 22rem
+  @media (max-width: 576px)
+    margin-top: $mob-col-gap
   .container
     flex-direction: column
     @media (max-width: 992px)
       padding: 0 50px
     @media (max-width: 576px)
-      padding: 0 30px
+      padding: 0 20px
 
   h2
     color: black
@@ -562,7 +577,8 @@ const toggleIsOpen = () => {
     padding: 0 50px
   @media (max-width: 576px)
     grid-template-columns: 1fr
-    padding: 0 30px
+    padding: 0 20px
+    margin: $mob-col-gap 0
 
   h2
     color: $font-black
@@ -574,6 +590,8 @@ const toggleIsOpen = () => {
 
 .news
   margin-bottom: 22rem
+  @media (max-width: 576px)
+    margin-bottom: $mob-col-gap
   h2
     text-align: center
     color: $font-black
@@ -588,5 +606,5 @@ const toggleIsOpen = () => {
 
 @media (max-width: 576px)
   .expert-design .container
-      padding: 0 10px
+      padding: 0 20px
 </style>
